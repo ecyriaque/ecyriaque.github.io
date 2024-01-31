@@ -1,74 +1,193 @@
-/* Styles généraux */
-body {
-    background-color: #e9ecef; /* Couleur de fond plus douce */
-    color: #495057; /* Couleur de texte principale */
-    font-family: 'Arial', sans-serif;
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Arial", sans-serif;
 }
 
-/* Navbar */
-.navbar-dark .navbar-nav .nav-link {
-    color: #f8f9fa;
+/* Navbar personnalisé */
+.navbar {
+  margin-bottom: 0;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #adb5bd;
+/* Section d'accueil */
+.full-height {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Style général pour la section d'accueil */
+.full-height {
+  color: #ffffff; /* Couleur blanche pour le texte pour contraster avec le fond sombre */
+  background: url("work.png") no-repeat center center/cover; /* Assurez-vous que le chemin de l'image est correct */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour améliorer la lisibilité sur les images complexes */
 }
 
-/* Titre de section */
-.container h2 {
-    color: #007bff; /* Couleur de titre bleu */
-    margin-bottom: 30px;
-    font-weight: bold;
+.full-height h1 {
+  font-size: 4em; /* Taille de la police pour le titre */
+  margin-bottom: 0.5em;
+  font-weight: bold;
 }
 
-/* Projets */
-.project-item {
-    margin-bottom: 5px; /* Espacement entre les projets */
-    margin-right: 5px; /* Espacement entre les projets */
-    background-color: #fff; /* Fond blanc pour chaque projet */
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Ombre légère */
- 
+.full-height p {
+  font-size: 1.5em; /* Taille de la police pour le texte */
+  margin-bottom: 0.5em;
 }
 
-.project-item img {
-    margin-bottom: 20px; /* Augmente l'espace en dessous de l'image */
-    padding: 10px; /* Ajoute un espace autour de l'image */
-    border-radius: 10px; /* Bords arrondis pour l'image */
+.full-height a {
+  color: #ade8f4; /* Couleur qui s'harmonise avec le thème de l'image */
+  font-weight: bold;
 }
 
-.project-item h3 {
-    color: #007bff; /* Titre du projet en bleu */
-    margin-bottom: 10px;
+.full-height a:hover {
+  color: #00b4d8; /* Une teinte un peu plus foncée pour le survol */
+  text-decoration: none; /* Pas de soulignement pour garder un aspect épuré */
 }
 
-.project-item p {
-    margin-bottom: 15px; /* Espacement avant le bouton */
+/* Ajoutez cette classe dans votre balise <a> pour le GitHub et Email */
+.contact-link {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fond semi-transparent pour les liens */
+  padding: 5px 10px; /* Espacement interne autour du texte */
+  border-radius: 5px; /* Bords arrondis pour les étiquettes */
+  transition: background-color 0.3s; /* Transition douce pour le survol */
 }
 
-.project-item .btn {
-    background-color: #28a745; /* Couleur verte pour le bouton */
-    color: #fff;
+.contact-link:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond un peu plus foncé au survol */
 }
 
-.project-item .btn:hover {
-    background-color: #218838;
+/* Keyframes pour l'animation du texte */
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
-/* Footer */
-footer {
-    background-color: #343a40;
-    color: #f8f9fa;
-    padding: 10px 0;
+/* Application de l'animation aux éléments de texte */
+.full-height h1,
+.full-height p,
+.full-height a {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
-footer a {
-    color: #f8f9fa;
+/* Délais d'animation spécifiques pour chaque élément */
+.full-height h1 {
+  animation-delay: 0.5s; /* Le titre apparaît après 0.5 secondes */
 }
 
-footer a:hover {
-    color: #ddd;
+.full-height p {
+  animation-delay: 0.8s; /* Le paragraphe apparaît après 0.8 secondes */
 }
 
+.full-height a {
+  animation-delay: 1.1s; /* Les liens apparaissent après 1.1 secondes */
+}
 
+/* Couleurs et fonds pour les sections */
+.bg-dark {
+  background-color: #343a40; /* Un gris foncé pour un look technologique */
+  color: #fff; /* Texte en blanc pour un contraste élevé */
+}
+
+.bg-light {
+  background-color: #f8f9fa; /* Un gris clair pour un aspect naturel et doux */
+  color: #343a40; /* Texte en gris foncé pour la lisibilité */
+}
+
+/* Texte centré et espacement pour toutes les sections */
+.section {
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* Titres de section */
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #76c893; /* Une couleur verte rappelant la nature */
+}
+
+/* Paragraphes de section */
+.section p {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: inherit; /* Hérite de la couleur de section */
+}
+
+/* Style des liens */
+.section a {
+  color: #64b5f6; /* Bleu pour les liens, évoquant la technologie */
+  text-decoration: none;
+}
+
+.section a:hover {
+  color: #2196f3; /* Un bleu plus vif au survol */
+}
+
+/* Arrière-plans avec images pour certaines sections */
+#academic {
+  height: 100vh;
+  background: url("2.png") no-repeat center center/cover;
+}
+
+#experience {
+  background: url("3.png") no-repeat center center/cover;
+}
+
+#interests {
+  background: url("4.png") no-repeat center center/cover;
+}
+
+/* Ajoutez une couleur de fond en dégradé pour un effet visuel */
+.gradient-background {
+  background: linear-gradient(
+    to right,
+    #56ccf2,
+    #2f80ed
+  ); /* Un dégradé de bleu */
+}
+
+/* Animation subtile pour les titres */
+.section h2 {
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Media queries pour la réactivité */
+@media (max-width: 768px) {
+  .section h2 {
+    font-size: 2em;
+  }
+  .section p {
+    font-size: 1em;
+  }
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+  .full-height h1 {
+    font-size: 3em;
+  }
+
+  .full-height p {
+    font-size: 1.2em;
+  }
+}
+.full-height {
+  color: #ffffff; /* Couleur blanche pour le texte pour contraster avec le fond sombre */
+  background: url("work.png") no-repeat center center/cover; /* Assurez-vous que le chemin de l'image est correct */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour améliorer la lisibilité sur les images complexes */
+}
