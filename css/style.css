@@ -1270,10 +1270,12 @@ footer .credits a {
   }
 }
 .work-box {
-  height: 500px; /* Ajustez cette valeur en fonction de vos besoins */
+  height: 550px; /* Ajustez cette valeur en fonction de vos besoins */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Cela aide à pousser le contenu vers le haut et le bas */
+  padding: 10px;
+  border-radius: 5%;
 }
 
 .work-img {
