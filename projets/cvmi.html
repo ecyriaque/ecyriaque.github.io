@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CVMI — Étude de cas · Emilio Cyriaque</title>
+    <meta
+      name="description"
+      content="CVMI — étude de cas par Emilio Cyriaque. Un coach de musculation qui accompagne les séances, même quand le réseau ne suit pas."
+    />
+    <meta name="theme-color" content="#f6f5f0" />
+    <meta property="og:title" content="CVMI — Emilio Cyriaque" />
+    <meta
+      property="og:description"
+      content="Un coach de musculation qui accompagne les séances, même quand le réseau ne suit pas."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:image"
+      content="https://ecyriaque.github.io/img/cvmi-dashboard.png"
+    />
+    <link
+      rel="canonical"
+      href="https://ecyriaque.github.io/projets/cvmi.html"
+    />
+    <link rel="icon" type="image/svg+xml" href="../img/monogram.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../css/portfolio.css" />
+    <script src="../js/portfolio.js" defer></script>
+    <noscript
+      ><style>
+        .menu-toggle {
+          display: none;
+        }
+        .site-nav {
+          display: flex;
+          position: static;
+          flex-wrap: wrap;
+          flex-direction: row;
+          padding: 12px 0;
+          box-shadow: none;
+          border: 0;
+        }
+        .header-inner {
+          height: auto;
+          flex-wrap: wrap;
+          padding-block: 16px;
+        }
+      </style></noscript
+    >
+  </head>
+  <body id="page-top">
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a
+          class="brand"
+          href="../index.html"
+          aria-label="Emilio Cyriaque, accueil"
+          ><span class="brand-mark" aria-hidden="true">ec.</span
+          ><span>Emilio Cyriaque<small>Développeur full stack</small></span></a
+        ><button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span>Menu</span><i aria-hidden="true"></i>
+        </button>
+        <nav
+          class="site-nav"
+          id="site-navigation"
+          aria-label="Navigation principale"
+        >
+          <a href="../index.html#work">Projets</a
+          ><a href="../index.html#experience">Expérience</a
+          ><a href="../index.html#about">À propos</a
+          ><a class="nav-contact" href="../index.html#contact"
+            >Échangeons <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="case-hero">
+        <div class="wrap">
+          <a class="back-link" href="../index.html#work"
+            ><span aria-hidden="true">←</span> Tous les projets</a
+          >
+          <p class="eyebrow">Étude de cas / Projet personnel</p>
+          <h1>CVMI<span style="color: var(--accent)">.</span></h1>
+          <p class="case-lead">
+            Un coach de musculation qui accompagne les séances, même quand le
+            réseau ne suit pas.
+          </p>
+          <dl class="case-facts">
+            <div>
+              <dt>Mon rôle</dt>
+              <dd>Conception · Développement · Déploiement</dd>
+            </div>
+            <div>
+              <dt>Stack principale</dt>
+              <dd>Next.js · React Native / Expo · NestJS</dd>
+            </div>
+            <div>
+              <dt>Usage</dt>
+              <dd>Web en production · client mobile</dd>
+            </div>
+            <div>
+              <dt>Code source</dt>
+              <dd>Dépôt privé</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <div class="wrap case-layout">
+        <details class="case-sidebar" open>
+          <summary>Dans cette étude de cas</summary>
+          <nav aria-label="Sommaire du projet">
+            <a href="#ce-que-j-ai-construit">Ce que j&#x27;ai construit</a
+            ><a href="#un-coaching-adapte-a-l-entrainement"
+              >Un coaching adapté à l&#x27;entraînement</a
+            ><a href="#les-seances-les-supersets-et-la-progression"
+              >Les séances, les supersets et la progression</a
+            ><a href="#l-authentification-en-detail"
+              >L&#x27;authentification, en détail</a
+            ><a href="#les-sessions-appareil-par-appareil"
+              >Les sessions, appareil par appareil</a
+            ><a href="#le-mode-hors-ligne">Le mode hors ligne</a
+            ><a href="#une-passerelle-vers-healthboard"
+              >Une passerelle vers Healthboard</a
+            ><a href="#mise-en-production">Mise en production</a
+            ><a href="#les-verifications-avant-livraison"
+              >Les vérifications avant livraison</a
+            ><a href="#outils-utilises">Outils utilisés</a>
+          </nav>
+        </details>
+        <article
+          class="case-article"
+          aria-label="Présentation détaillée de CVMI"
+        >
+          <p class="s-description">
+            Une application de suivi et de coaching de musculation, avec une
+            interface web et un client mobile développé pour Android et iOS. Je
+            l'ai menée seul de bout en bout, du cahier des charges à la mise en
+            production. Mon fil conducteur : pouvoir noter ses séries en salle,
+            suivre sa progression et retrouver ses données malgré les coupures
+            réseau.
+          </p>
+
+          <h2 id="ce-que-j-ai-construit">Ce que j'ai construit</h2>
+          <p class="s-description">
+            Un back-end NestJS découpé en modules métier — exercices, muscles,
+            programmes, séances, performances — sur PostgreSQL avec TypeORM et
+            des migrations versionnées. Cette API commune applique les règles
+            métier et vérifie que chaque utilisateur accède uniquement à ses
+            propres programmes, séances et performances.
+          </p>
+          <p class="s-description">
+            Le web utilise Next.js et le mobile React Native avec Expo. Les deux
+            clients vivent dans un monorepo npm, avec un package TypeScript
+            commun pour les contrats métier, la validation et la charte
+            graphique. Ils partagent les comptes et l'API, tout en gardant une
+            interface et un stockage hors ligne adaptés à chaque plateforme.
+          </p>
+
+          <h2 id="un-coaching-adapte-a-l-entrainement">
+            Un coaching adapté à l'entraînement
+          </h2>
+          <p class="s-description">
+            En production, les recommandations reposent sur des règles métier
+            explicables : objectif de force, d'hypertrophie ou de faible volume
+            ; phase de prise de masse, de maintien ou de sèche ; historique et
+            effort ressenti. Les charges proposées respectent aussi le matériel
+            et les incréments disponibles dans la salle.
+          </p>
+          <p class="s-description">
+            J'ai également intégré ONNX Runtime côté serveur et un pipeline
+            d'entraînement pour expérimenter un modèle de recommandation. Cette
+            voie reste optionnelle : le moteur actif pour les conseils par
+            exercice est celui des règles métier.
+          </p>
+
+          <p class="s-description">
+            <img
+              loading="lazy"
+              src="../img/cvmi-dashboard.png"
+              alt="Tableau de bord de CVMI, avec les statistiques d'entraînement et le panneau de coaching par IA"
+              class="img-fluid"
+            />
+          </p>
+          <p class="s-description">
+            <em
+              >Vue web du tableau de bord : le panneau de coaching synthétise
+              les conseils d'ajustement de charge, de RPE et de repos à partir
+              de l'historique.</em
+            >
+          </p>
+
+          <h2 id="les-seances-les-supersets-et-la-progression">
+            Les séances, les supersets et la progression
+          </h2>
+          <p class="s-description">
+            Chaque série conserve sa charge, ses répétitions, son RPE et son
+            repos. Un superset associe deux exercices : enregistrer A ouvre B
+            sans récupération, puis enregistrer B lance le repos commun avant le
+            tour suivant. Les paires sont sauvegardées dans la séance, y compris
+            quand elle est suivie hors ligne.
+          </p>
+          <p class="s-description">
+            L'historique détaillé par exercice permet de retrouver les anciennes
+            séries et d'estimer un maximum, en tenant compte du poids de corps
+            pour les mouvements concernés. Le mobile permet aussi de créer un
+            exercice depuis le catalogue, un programme ou une séance. Le
+            catalogue est partagé ; la modification et la suppression restent
+            réservées aux administrateurs, avec protection des exercices
+            système.
+          </p>
+
+          <p class="s-description">
+            <img
+              loading="lazy"
+              src="../img/cvmi-seances.png"
+              alt="Historique des séances d'entraînement avec leur statut et leur durée"
+              class="img-fluid"
+            />
+          </p>
+
+          <h2 id="l-authentification-en-detail">
+            L'authentification, en détail
+          </h2>
+          <p class="s-description">
+            C'est la partie dont je suis le plus satisfait, parce que c'est
+            celle où une erreur coûte le plus cher. Les mots de passe sont
+            hachés avec Argon2. Les jetons JWT sont émis par paire, un access et
+            un refresh. Le jeton de renouvellement est lui aussi stocké haché en
+            base, puis consommé et remplacé dans une transaction lors de son
+            utilisation.
+          </p>
+          <p class="s-description">
+            La vérification d'e-mail est obligatoire avant le premier accès, la
+            politique de mot de passe impose douze caractères avec majuscule,
+            minuscule, chiffre et caractère spécial — validée en direct dans le
+            formulaire — et le lien de réinitialisation expire au bout de trente
+            minutes. Les origines autorisées en CORS sont déclarées
+            explicitement, jamais ouvertes par défaut.
+          </p>
+          <p class="s-description">
+            Quatre garde-fous que j'ai ajoutés parce qu'ils manquaient : une
+            double authentification par code envoyé par e-mail à la connexion,
+            un CAPTCHA à l'inscription pour limiter les créations automatisées,
+            un historique des mots de passe pour empêcher la réutilisation d'un
+            ancien, et une question de sécurité pour la récupération de compte.
+          </p>
+
+          <p class="s-description">
+            <img
+              loading="lazy"
+              src="../img/cvmi-2fa.png"
+              alt="Écran de saisie du code de connexion à six chiffres envoyé par e-mail"
+              class="img-fluid"
+            />
+          </p>
+
+          <h2 id="les-sessions-appareil-par-appareil">
+            Les sessions, appareil par appareil
+          </h2>
+          <p class="s-description">
+            Chaque connexion crée une session rattachée à un appareil. Le
+            serveur en déduit le type de matériel, le navigateur et le système
+            d'exploitation, et les conserve avec l'adresse IP et la date.
+            L'utilisateur voit donc la liste de ses sessions ouvertes et peut en
+            révoquer une à distance, sans toucher aux autres. C'est ce qu'on
+            attend quand on s'est connecté depuis un téléphone prêté ou un poste
+            partagé.
+          </p>
+
+          <h2 id="le-mode-hors-ligne">Le mode hors ligne</h2>
+          <p class="s-description">
+            C'est la contrainte qui a le plus façonné l'application : dans une
+            salle de sport, le réseau est souvent mauvais, et on ne peut pas
+            demander à quelqu'un d'attendre le wifi pour noter une série. Les
+            séances et les performances peuvent donc être enregistrées
+            localement avant d'être synchronisées au retour du réseau.
+          </p>
+          <p class="s-description">
+            Sur le web, le service worker gère les ressources de la PWA, tandis
+            qu'IndexedDB conserve les données métier séparément pour chaque
+            compte. Les réponses d'API privées ne sont pas mises en cache par le
+            service worker. Sur mobile, SQLite conserve les données et la file
+            d'attente ; les jetons sont enregistrés dans SecureStore.
+          </p>
+          <p class="s-description">
+            Les écritures en attente sont préservées pendant la synchronisation.
+            Des identifiants de création permettent au serveur de reconnaître
+            une séance ou une série déjà acceptée si sa réponse s'est perdue, et
+            d'éviter sa duplication lors d'une reprise. Le mobile retrouve le
+            deuxième exercice d'un superset si le premier a été enregistré avant
+            de fermer l'application. La création d'un nouvel exercice nécessite
+            une connexion.
+          </p>
+
+          <h2 id="une-passerelle-vers-healthboard">
+            Une passerelle vers Healthboard
+          </h2>
+          <p class="s-description">
+            Une API dédiée permet à Healthboard de consulter les séances CVMI
+            pour rapprocher entraînement et suivi santé. Son accès est limité au
+            profil autorisé, avec une clé spécifique et une expiration. Le
+            serveur MCP de Healthboard utilise cette lecture pour les assistants
+            connectés, sans pouvoir modifier les séances ou les programmes CVMI.
+          </p>
+
+          <h2 id="mise-en-production">Mise en production</h2>
+          <p class="s-description">
+            Le web et l'API sont hébergés sur un VPS OVH avec Docker Compose :
+            serveur Next.js, API NestJS, PostgreSQL et Nginx en reverse proxy.
+            Un tunnel Cloudflare expose le site, tandis que les ports directs
+            des services restent limités à la boucle locale. GitHub Actions
+            sépare la validation et le déploiement ; SonarQube analyse la
+            qualité du code sur un runner personnel. En développement, un
+            serveur SMTP local intercepte les e-mails pour tester les parcours
+            sans en envoyer à de vrais destinataires.
+          </p>
+
+          <h2 id="les-verifications-avant-livraison">
+            Les vérifications avant livraison
+          </h2>
+          <p class="s-description">
+            La CI vérifie les types, le lint, les tests unitaires et les tests
+            de bout en bout de l'API. Jest couvre le backend ; Vitest couvre le
+            code partagé, le web et le cœur mobile, notamment la reprise réseau
+            et l'isolation des comptes. Elle contrôle aussi la compatibilité des
+            dépendances Expo et génère les bundles Android et iOS.
+          </p>
+
+          <h2 id="outils-utilises">Outils utilisés</h2>
+          <p class="s-description">
+            TypeScript, NestJS, TypeORM, PostgreSQL, Next.js, React Native,
+            Expo, TanStack Query, SQLite, SecureStore, Argon2, Jest, Vitest,
+            Docker Compose, Nginx, Cloudflare Tunnel, GitHub Actions et
+            SonarQube. ONNX Runtime pour l'expérimentation de modèles.
+          </p>
+          <div class="case-bottom">
+            <a class="text-link" href="../index.html#work">← Tous les projets</a
+            ><a class="text-link" href="conso.html"
+              >Explorer Conso <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="wrap site-footer">
+      <span>© 2026 Emilio Cyriaque.</span
+      ><a href="../index.html#contact">Parlons de votre projet ↗</a>
+    </footer>
+  </body>
+</html>

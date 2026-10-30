@@ -1,1077 +1,606 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>Portfolio Emilio Cyriaque</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
-
-    <!-- Favicons -->
-
-
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-
-    <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet" />
-
-    <!-- =======================================================
-    Theme Name: DevFolio
-    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
-  </head>
-
-  <body id="page-top">
-    <!--/ Nav Star /-->
-    <nav
-      class="navbar navbar-b navbar-trans navbar-expand-md fixed-top"
-      id="mainNav"
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emilio Cyriaque — Développeur full stack</title>
+    <meta
+      name="description"
+      content="Développeur full stack React, TypeScript et NestJS. Découvrez mes projets web et mobiles en production, mon expérience et mon parcours. Disponible en CDI dès novembre 2026."
+    />
+    <meta name="theme-color" content="#f6f5f0" />
+    <meta
+      property="og:title"
+      content="Emilio Cyriaque — Développeur full stack"
+    />
+    <meta
+      property="og:description"
+      content="Du code aux produits en production. Projets, expérience et parcours d’un développeur React, TypeScript et NestJS."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ecyriaque.github.io/" />
+    <meta
+      property="og:image"
+      content="https://ecyriaque.github.io/img/moi-linkedin.png"
+    />
+    <link rel="canonical" href="https://ecyriaque.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="img/monogram.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <script src="js/portfolio.js" defer></script>
+    <noscript
+      ><style>
+        .menu-toggle {
+          display: none;
+        }
+        .site-nav {
+          display: flex;
+          position: static;
+          flex-wrap: wrap;
+          flex-direction: row;
+          padding: 12px 0;
+          box-shadow: none;
+          border: 0;
+        }
+        .header-inner {
+          height: auto;
+          flex-wrap: wrap;
+          padding-block: 16px;
+        }
+        .site-nav a {
+          padding: 4px;
+          font-size: 13px;
+        }
+        .site-nav .nav-contact {
+          margin: 0;
+          padding: 4px 10px;
+        }
+      </style></noscript
     >
-      <div class="container">
-        <a class="navbar-brand js-scroll" href="#page-top">Emilio Cyriaque</a>
+  </head>
+  <body id="page-top">
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#home" aria-label="Emilio Cyriaque, accueil"
+          ><span class="brand-mark" aria-hidden="true">ec.</span
+          ><span>Emilio Cyriaque<small>Développeur full stack</small></span></a
+        >
         <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarDefault"
-          aria-controls="navbarDefault"
+          class="menu-toggle"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-controls="site-navigation"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span>Menu</span><i aria-hidden="true"></i>
         </button>
-        <div
-          class="navbar-collapse collapse justify-content-end"
-          id="navbarDefault"
+        <nav
+          class="site-nav"
+          id="site-navigation"
+          aria-label="Navigation principale"
         >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link js-scroll active" href="#home">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll" href="#about">A propos de moi</a>
-            </li>
-                                    <li class="nav-item">
-              <a class="nav-link js-scroll" href="#experience">Expérience</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link js-scroll" href="#academic">Parcours académique</a>
-</li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll" href="#work">Projets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll" href="#last-project">En détail</a>
-            </li>
-                        <li class="nav-item">
-              <a class="nav-link js-scroll" href="#skills">Compétences</a>
-            </li>
-
-          </ul>
-        </div>
+          <a href="#work">Projets</a><a href="#experience">Expérience</a
+          ><a href="#skills">Compétences</a><a href="#about">À propos</a
+          ><a href="#contact" class="nav-contact"
+            >Parlons de votre projet <span aria-hidden="true">↗</span></a
+          >
+        </nav>
       </div>
-    </nav>
-    <!--/ Nav End /-->
-
-    <!--/ Intro Skew Star /-->
-    <div id="home" class="intro route bg-image" style="background-color: black">
-      <div class="overlay-itro"></div>
-      <div class="intro-content display-table">
-        <div class="table-cell">
-          <div class="container">
-            <!--<p class="display-6 color-d">Hello, world!</p>-->
-            <h1 class="intro-title mb-4">Je suis Emilio Cyriaque</h1>
-            <p class="intro-subtitle">
-              <span class="text-slider-items"
-                >Développeur full stack,React et TypeScript,NestJS et
-                PostgreSQL,Docker et CI/CD,Disponible en novembre 2026</span
-              ><strong class="text-slider"></strong>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero wrap" id="home" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="availability"
+              >Disponible en CDI dès novembre 2026</span
+            >
+            <h1 id="hero-title">
+              Du code.<br />Des produits.<br /><em>En production.</em>
+            </h1>
+            <p class="hero-description">
+              Je suis <strong>Emilio Cyriaque</strong>, développeur full stack.
+              Je conçois des applications utiles, de l’interface à l’API, et je
+              les accompagne jusqu’à leur mise en production.
             </p>
-            <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--/ Intro Skew End /-->
-
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                                   <div class="col-sm-6 col-md-5">
-                    <div class="about-img">
-                      <img src="img/moi-linkedin.png" class="img-fluid rounded-circle b-shadow-a" alt="Portrait d'Emilio Cyriaque">
-
-                    </div>
-                  </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p>
-                          <span class="title-s">Nom: </span>
-                          <span>Emilio Cyriaque</span>
-                        </p>
-                        <p>
-                          <span class="title-s">Profil: </span>
-                          <span>Développeur full stack — React / NestJS / TypeScript</span>
-                        </p>
-                        <p>
-                          <span class="title-s">Email: </span>
-                          <span>emilio.cyriaque97493@gmail.com</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">A propos de moi</h5>
-                    </div>
-                    <p class="lead">
-                      Je suis développeur full stack. Depuis novembre 2024 je travaille chez Wartner,
-                      éditeur d'un SaaS de gestion et de traçabilité pour la blanchisserie industrielle,
-                      en alternance dans le cadre de mon Mastère Lead Developer Full Stack à l'ENSITECH.
-                      J'y code sur trois applications en production, de la requête SQL jusqu'à l'écran React.
-                    </p>
-                    <p class="lead">
-                      Ce que je préfère, c'est livrer une fonctionnalité de bout en bout et en rester
-                      responsable une fois qu'elle tourne. C'est pour ça que je monte aussi mes propres
-                      projets seul, jusqu'au déploiement : Docker, reverse proxy, CI/CD, monitoring.
-                      Deux d'entre eux sont en production aujourd'hui.
-                    </p>
-                    <p class="lead">
-                      Je termine mon alternance en novembre 2026 et je cherche un CDI à partir de cette date.
-                    </p>
-                    <p class="lead">
-                      En dehors du code, je fais du street workout. La progression s'y joue sur la
-                      régularité plus que sur l'intensité, et ça se transpose assez bien au métier.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-<section id="resume" class="services-mf route">
-    <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">Mon CV </h3>
-                    <p class="subtitle-a">
-                        Voici un aperçu de mon parcours et de mes compétences.
-                    </p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="service-box">
-          <div class="service-content">
-<div class="resume-box">
-               <ul>
-    <li>Deux ans en production chez un éditeur SaaS : React, TypeScript, Vite et TanStack Query côté front, NestJS, TypeORM et PostgreSQL côté back.</li>
-    <li>Une vingtaine de rapports décisionnels livrés de bout en bout, de la requête SQL à l'écran, avec exports CSV et Excel.</li>
-    <li>Bascule multi-comptes parent/enfant : émission et validation des JWT, résolution des droits côté API, contrôle d'accès par rôle, couverts par tests unitaires.</li>
-    <li>Deux applications conçues et déployées seul, toujours en service : une plateforme de monitoring énergétique et un coach de musculation web et mobile.</li>
-    <li>Docker, Nginx, GitHub Actions, SonarQube, Datadog, Elasticsearch. J'industrialise ce que je développe.</li>
-    <li>BUT Informatique obtenu en 2024. Mastère Lead Developer Full Stack à l'ENSITECH jusqu'en novembre 2026.</li>
-</ul>
-                    <p class="s-description text-center">
-                        Le CV complet est en téléchargement. Le reste est sur LinkedIn et GitHub.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="CV_Emilio_Cyriaque.pdf" class="btn btn-primary" download>Télécharger mon CV</a>
-                        <a href="https://www.linkedin.com/in/emilio-c-664481304/" class="btn btn-primary" target="_blank" rel="noopener">LinkedIn</a>
-                        <a href="https://github.com/ecyriaque" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
-                    </div>
-                </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Section Experience Start -->
-    
-<section id="experience" class="services-mf route">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="title-box text-center">
-                    <h3 class="title-a">Expérience</h3>
-                    <p class="subtitle-a">
-                        Un aperçu de mes expériences professionnelles et de stages, périodes d'apprentissage et de développement personnel.
-                    </p>
-                    <div class="line-mf"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Première expérience -->
-            <div class="col-md-12">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="ion-android-laptop"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Développement d'Interfaces Utilisateur pour la Plateforme SPACeL</h2>
-                        <p class="s-description text-center">
-                            Durant mon stage au LIASD du 4 mai au 30 juin 2023, j'ai contribué au développement des interfaces utilisateur pour la plateforme SPACeL, en mettant l'accent sur la création d'une expérience utilisateur améliorée et la facilitation de l'interaction avec la plateforme. J'ai travaillé avec des technologies telles que React.js, Node.js et TypeScript, et j'ai été impliqué dans l'intégration des services web avec le backend.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Deuxième expérience -->
-            <div class="col-md-12">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="ion-android-laptop"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Stagiaire en Développement Fullstack React.js/Node.js</h2>
-                        <p class="s-description text-center">
-                            De mars 2024 à juillet 2024, j'ai effectué un stage au Laboratoire d’Intelligence Artificielle et Sémantique des Données (LIASD) à l'IUT de Montreuil. Mes principales réalisations incluent la conception et l'amélioration des interfaces d'annotation pour les nouvelles fonctionnalités de la plateforme SPACeL, le développement et l'intégration d'une API en Node.js pour tester ces interfaces, et la dockerisation complète de l'application (front-end, back-end, base de données) pour une meilleure portabilité et gestion des environnements.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Alternance -->
-            <div class="col-md-12">
-                <div class="service-box">
-                    <div class="service-ico">
-                        <span class="ico-circle"><i class="ion-android-laptop"></i></span>
-                    </div>
-                    <div class="service-content">
-                        <h2 class="s-title">Développeur Full Stack en alternance chez Wartner — depuis novembre 2024</h2>
-                        <p class="s-description text-center">
-                            Wartner édite un SaaS de gestion et de traçabilité pour la blanchisserie industrielle.
-                            J'y travaille sur trois applications en production : un back-office React, un portail
-                            client et l'API NestJS qui les alimente.
-                        </p>
-                        <p class="s-description text-center">
-                            Concrètement : une vingtaine de rapports décisionnels livrés de bout en bout, de la
-                            requête SQL à l'écran, avec exports CSV et Excel. La bascule multi-comptes
-                            parent/enfant, avec émission et validation des JWT et contrôle d'accès par rôle,
-                            couverte par tests unitaires. L'optimisation de requêtes PostgreSQL sur données de
-                            production, et la suppression à la source de doublons qui faussaient les indicateurs
-                            livrés aux clients.
-                        </p>
-                        <p class="s-description text-center">
-                            Environ 850 commits et 25 tickets Jira sur la période. Scrum, revues de code, tests
-                            unitaires sur la logique métier.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Section Experience End -->
-
-      <!--/ Section Services Star /-->
-  <section id="academic" class="services-mf route">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">Parcours Académique</h3>
-            <p class="subtitle-a">
-              Mon parcours académique reflète mon engagement envers l'apprentissage continu et l'excellence dans le domaine de l'informatique.
-            </p>
-            <div class="line-mf"></div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Baccalauréat -->
-        <div class="col-md-6">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-university"></i></span>
-            </div>
-            <div class="service-content">
-              <h2 class="s-title">Baccalauréat STI2D</h2>
-              <p class="s-description text-center">
-                Obtenu avec mention Assez Bien au Lycée Condorcet, Montreuil en 2021, ce diplôme a posé les fondations de mes compétences techniques et théoriques.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- BUT Informatique -->
-        <div class="col-md-6">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-laptop"></i></span>
-            </div>
-            <div class="service-content">
-              <h2 class="s-title">Bachelor Universitaire de Technologie en Informatique</h2>
-              <p class="s-description text-center">
-                Diplômé de l'IUT de Montreuil en 2024, ce parcours m'a permis de développer des compétences solides en développement logiciel, conception de systèmes d'information et gestion de projets.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Mastère Lead Developer -->
-        <div class="col-md-12">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="ion-code-working"></i></span>
-            </div>
-            <div class="service-content">
-              <h2 class="s-title">Mastère Lead Developer Full Stack</h2>
-              <p class="s-description text-center">
-                Actuellement étudiant en Mastère Lead Developer Full Stack à l’ENSITECH de Cergy, je me spécialise dans le développement d'applications web et mobiles, tout en approfondissant mes compétences en architecture logicielle et gestion d’équipe technique.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <!--/ Section Services End /-->
-
-    <!--/ Section Portfolio Star /-->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">Projets personnels</h3>
-              <p class="subtitle-a">
-                Les deux premiers tournent en production. Je les ai conçus, développés et déployés seul.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- Conso -->
-          <div class="col-md-6">
-            <div class="work-box">
-              <div class="work-img">
-                <img src="img/conso-dashboard.png" alt="Tableau de bord de la plateforme de monitoring énergétique" class="img-fluid" />
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Conso — monitoring énergétique</h2>
-                    <p class="w-description">
-                      Construite à la demande d'un technicien qui l'utilise au quotidien. Elle agrège
-                      les consommations de gaz, d'eau et d'électricité, suit des objectifs et exporte
-                      en PDF et Excel. Les données viennent de capteurs LoRa et de l'API ENEDIS.
-                      Monorepo NestJS et React sur PostgreSQL, déployé par Docker Compose derrière
-                      Nginx, avec CI/CD GitHub Actions et logs Datadog. L'accès est filtré par
-                      Cloudflare Access en Zero Trust. Code privé.
-                    </p>
-                    <div class="w-more">
-                      <span class="w-ctegory">NestJS · React · PostgreSQL · Docker · CI/CD</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CVMI -->
-          <div class="col-md-6">
-            <div class="work-box">
-              <div class="work-img">
-                <img src="img/cvmi-dashboard.png" alt="Tableau de bord de CVMI avec le panneau de coaching par IA" class="img-fluid" />
-              </div>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">CVMI — coach virtuel de musculation</h2>
-                    <p class="w-description">
-                      Une application de suivi et de coaching de musculation : web Next.js et client
-                      Android/iOS en React Native avec Expo, reliés à une API NestJS sur PostgreSQL.
-                      Séances, supersets, historique et conseils adaptés à l'objectif et au matériel,
-                      grâce à un moteur de règles explicable. Saisie des séries hors ligne avec
-                      synchronisation persistante, authentification à deux facteurs par e-mail et
-                      sessions révocables par appareil. Déployée sur un VPS OVH. Code privé.
-                    </p>
-                    <div class="w-more">
-                      <span class="w-ctegory">NestJS · Next.js · React Native · Expo · PostgreSQL</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mario Party Jamboree -->
-          <div class="col-md-6">
-            <div class="work-box">
-              <a href="https://mario-party-jamboree.vercel.app" target="_blank" rel="noopener">
-                <div class="work-img">
-                  <img src="img/mario-party.png" alt="Écran titre du sélecteur de plateau 3D" class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h2 class="w-title">Mario Party Jamboree — sélecteur de plateau 3D</h2>
-                      <p class="w-description">
-                        Un sélecteur de plateau aléatoire, en ligne et jouable. Une scène 3D animée avec
-                        Three.js et React Three Fiber, des transitions GSAP, l'audio synchronisé via
-                        Howler et l'état géré par Zustand. C'est le projet où je me suis fait plaisir
-                        sur le rendu.
-                      </p>
-                      <div class="w-more">
-                        <span class="w-ctegory">Voir en ligne · React · Three.js · GSAP</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- Gestion de projet Symfony -->
-          <div class="col-md-6">
-            <div class="work-box">
-              <a href="https://github.com/ecyriaque/gestionPRojetSymfony" target="_blank" rel="noopener">
-                <div class="work-img">
-                  <img src="img/work-4.jpg" alt="Application de gestion de projet" class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h2 class="w-title">Gestion de projet — Symfony et ELK</h2>
-                      <p class="w-description">
-                        Une application de suivi de projets avec authentification et droits par rôle.
-                        Symfony 6.4 sur PHP 8.3 et MySQL, le tout conteneurisé. La partie intéressante
-                        est l'observabilité : journalisation centralisée avec Elasticsearch et Logstash,
-                        et des tableaux de bord Kibana.
-                      </p>
-                      <div class="w-more">
-                        <span class="w-ctegory">Symfony · MySQL · Docker · ELK</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">Projets académiques</h3>
-              <p class="subtitle-a">
-                Réalisés pendant mon BUT à l'IUT de Montreuil.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- Refonte d'Éditeur d'Emploi du Temps -->
-          <div class="col-md-6">
-            <div class="work-box">
-              <a
-             href="https://github.com/ecyriaque/Editeur-EDT.git"
-            target="_blank"
+            <div class="actions">
+              <a class="button" href="#work"
+                >Découvrir mes projets
+                <span class="arrow" aria-hidden="true">↘</span></a
+              ><a class="text-link" href="CV_Emilio_Cyriaque.pdf" download
+                >Télécharger mon CV <span aria-hidden="true">↓</span></a
               >
-                <div class="work-img">
-                  <img
-                    src="img/edt.png"
-                    alt="Éditeur d'Emploi du Temps"
-                    class="img-fluid"
-                  />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h2 class="w-title">
-                        Refonte d'Éditeur d'Emploi du Temps - IUT de Montreuil
-                      </h2>
-                                <p class="w-description">
-            Projet de groupe pour refondre un éditeur d'emploi du temps,
-            impliquant la conception et le développement avec Flask et Angular.
-            Rôle actif dans les phases de conception, développement back-end et
-            front-end, ainsi que dans le DevOps.
-          </p>
-                      <div class="w-more">
-                        <span class="w-ctegory">Web Development</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
             </div>
+            <p class="hero-note">
+              React &amp; TypeScript · NestJS · PostgreSQL · Docker
+            </p>
           </div>
-
-                   <div class="col-md-6">
-            <div class="work-box">
-              <a
-             href="https://github.com/DUT-Info-Montreuil/Recette5.git"
-            target="_blank"
-              >
-                <div class="work-img">
-                  <img
-                    src="img/recette.png"
-                    alt="Éditeur d'Emploi du Temps"
-                    class="img-fluid"
-                  />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h2 class="w-title">
-                        Site de partage de recette 
-                      </h2>
-                                <p class="w-description">
-Ce projet consiste en un site web de création et de partage de recettes culinaires où les utilisateurs peuvent publier leurs propres recettes, explorer celles d'autres passionnés, et laisser des avis ou des suggestions sur les recettes testées. Il offre une plateforme interactive pour les amateurs de cuisine de tous niveaux, encourageant l'échange de conseils, d'astuces et d'expériences culinaires.(html,css,php,js,sql)
-                                </p>
-                      <div class="w-more">
-                        <span class="w-ctegory">Web Development</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+          <figure class="portrait-card">
+            <img
+              src="img/moi-linkedin.png"
+              width="600"
+              height="600"
+              alt="Emilio Cyriaque, développeur full stack"
+              fetchpriority="high"
+            />
+            <span class="portrait-tag">De l’idée à la livraison.</span>
+            <figcaption class="portrait-caption">
+              <span>Emilio Cyriaque</span
+              ><span>Développement · Architecture · Livraison</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="hero-rail" aria-label="Mon profil en quelques repères">
+          <div class="rail-item">
+            <strong>Full stack</strong
+            ><span>Du front à la base de données</span>
           </div>
-          <!-- Terraria Like en Java -->
+          <div class="rail-item">
+            <strong>En production</strong><span>Wartner · CVMI · Conso</span>
+          </div>
+          <div class="rail-item">
+            <strong>Web &amp; mobile</strong><span>React · Next.js · Expo</span>
+          </div>
+        </div>
+      </section>
 
-                <div class="col-md-6">
-        <div class="work-box">
-          <a href="https://github.com/ecyriaque/survie4.git" ></a>
-            <div class="work-img">
-              <img src="img/survie4.png" alt="Terraria Like en Java" class="img-fluid" />
-            </div>
-            <div class="work-content">
-              <div class="row">
-                <div class="col-sm-12">
-                  <h2 class="w-title">Terraria Like en Java</h2>
-                            <p class="w-description">
-            Réalisation d'un jeu de type Terraria en Java. Le but du jeu est de
-            farmer des ressources, construire des armes, et survivre aux vagues
-            de zombies.
+      <section class="section wrap" id="work" aria-labelledby="projects-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">01 / Projets sélectionnés</p>
+            <h2 id="projects-title">Conçus pour être utilisés.</h2>
+          </div>
+          <p class="section-intro">
+            Deux applications que j’ai conçues, développées et déployées seul.
+            De vrais usages, avec les contraintes qui vont avec.
           </p>
-                  <div class="w-more">
-                    <span class="w-ctegory">Game Development</span>
-                  </div>
-                </div>
+        </div>
+        <div class="project-list">
+          <article class="project-card" id="last-project">
+            <a
+              class="project-visual visual-cvmi"
+              href="projets/cvmi.html"
+              aria-label="Lire l’étude de cas CVMI"
+              ><img
+                src="img/cvmi-dashboard.png"
+                width="1440"
+                height="900"
+                alt="Tableau de bord web de CVMI et son panneau de coaching"
+                loading="lazy"
+            /></a>
+            <div class="project-content">
+              <div class="project-meta">
+                01 — Projet personnel <span>En production</span>
               </div>
-            </div>
-          </a>
-        </div>
-      </div>
-<div class="col-md-6">
-  <div class="work-box">
-    <a href="https://github.com/ecyriaque/Burger7" target="_blank">
-      <div class="work-img">
-        <img src="img/burger7.png" alt="Application de Gestion de Commandes de Burgers" class="img-fluid" />
-      </div>
-      <div class="work-content">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2 class="w-title">Application de Gestion de Commandes de Burgers</h2>
-            <p class="w-description">
-              Ce projet Android a été développé pour optimiser la prise de commande et la gestion en cuisine via android studio. Avec une interface utilisateur intuitive, l'application permet aux utilisateurs de commander des burgers, personnaliser leurs commandes, et aux cuisiniers de suivre en temps réel les demandes des clients.
-            </p>
-            <div class="w-more">
-              <span class="w-ctegory">Mobile Development</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-
-          <!-- Pokedex en Angular -->
-          <div class="col-md-6">
-            <div class="work-box">
-              <a
-                      href="https://github.com/ecyriaque/poke8.git"
-            target="_blank"
+              <h3>CVMI</h3>
+              <div class="project-subtitle">
+                Le suivi sportif, même sans réseau.
+              </div>
+              <p>
+                Un coach de musculation web et mobile : séances, supersets et
+                recommandations adaptées. Une API commune, des données
+                disponibles hors ligne et une synchronisation qui reprend après
+                une coupure.
+              </p>
+              <ul class="tags" aria-label="Technologies CVMI">
+                <li>Next.js</li>
+                <li>React Native / Expo</li>
+                <li>NestJS</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <a class="text-link" href="projets/cvmi.html"
+                >Explorer le projet <span aria-hidden="true">↗</span></a
               >
-                <div class="work-img">
-                  <img
-                    src="img/pokedex.jpeg"
-                    alt="Pokedex en Angular"
-                    class="img-fluid"
-                  />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h2 class="w-title">Pokedex en Angular</h2>
-                                <p class="w-description">
-            Réalisation d'un Pokedex utilisant Angular, offrant une interface
-            utilisateur interactive pour parcourir et afficher des informations
-            sur divers Pokémon.
-          </p>
-                      <div class="w-more">
-                        <span class="w-ctegory">Web Application</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
+            </div>
+          </article>
+          <article class="project-card dark" id="conso">
+            <a
+              class="project-visual"
+              href="projets/conso.html"
+              aria-label="Lire l’étude de cas Conso"
+              ><img
+                src="img/conso-dashboard.png"
+                width="1440"
+                height="900"
+                alt="Tableau de bord de Conso pour le suivi des consommations énergétiques"
+                loading="lazy"
+            /></a>
+            <div class="project-content">
+              <div class="project-meta">
+                02 — Besoin métier <span>En production</span>
+              </div>
+              <h3>Conso</h3>
+              <div class="project-subtitle">
+                Des données brutes aux bons indicateurs.
+              </div>
+              <p>
+                Une plateforme de monitoring énergétique utilisée par un
+                technicien. Elle réunit gaz, eau et électricité, depuis les
+                capteurs LoRa et l’API ENEDIS jusqu’aux tableaux de bord et aux
+                exports.
+              </p>
+              <ul class="tags" aria-label="Technologies Conso">
+                <li>React</li>
+                <li>NestJS</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+              </ul>
+              <a class="text-link" href="projets/conso.html"
+                >Explorer le projet <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+        </div>
+        <div class="project-more">
+          <article class="experiment">
+            <img
+              src="img/mario-party.png"
+              width="188"
+              height="188"
+              loading="lazy"
+              alt="Sélecteur de plateau Mario Party Jamboree"
+            />
+            <div>
+              <p class="eyebrow">Terrain de jeu</p>
+              <h3>Mario Party en 3D</h3>
+              <p>
+                React Three Fiber, Three.js, GSAP et une bonne dose
+                d’expérimentation.
+              </p>
+              <a
+                class="text-link"
+                href="https://mario-party-jamboree.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Voir la démo <span aria-hidden="true">↗</span
+                ><span class="sr-only"> (nouvel onglet)</span></a
+              >
+            </div>
+          </article>
+          <details class="archive">
+            <summary>D’autres projets, d’autres apprentissages</summary>
+            <p>
+              Des projets de formation et d’exploration, côté web, mobile et
+              jeux.
+            </p>
+            <div class="archive-grid">
+              <article class="archive-item">
+                <h4>Gestion de projet</h4>
+                <p>
+                  Authentification, rôles et observabilité avec Symfony, MySQL,
+                  Docker et ELK.
+                </p>
+                <a
+                  href="https://github.com/ecyriaque/gestionPRojetSymfony"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code ↗</a
+                >
+              </article>
+              <article class="archive-item">
+                <h4>Éditeur d’emploi du temps</h4>
+                <p>Refonte en groupe d’un éditeur pour l’IUT de Montreuil.</p>
+                <a
+                  href="https://github.com/ecyriaque/Editeur-EDT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code ↗</a
+                >
+              </article>
+              <article class="archive-item">
+                <h4>Partage de recettes</h4>
+                <p>
+                  Création, publication et commentaires. HTML, CSS, PHP,
+                  JavaScript et SQL.
+                </p>
+                <a
+                  href="https://github.com/DUT-Info-Montreuil/Recette5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code ↗</a
+                >
+              </article>
+              <article class="archive-item">
+                <h4>Terraria-like</h4>
+                <p>
+                  Un jeu en Java pour explorer la programmation et les
+                  mécaniques de survie.
+                </p>
+                <a
+                  href="https://github.com/ecyriaque/survie4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code ↗</a
+                >
+              </article>
+              <article class="archive-item">
+                <h4>Burger7</h4>
+                <p>
+                  Application Android de prise de commande et de suivi en
+                  cuisine.
+                </p>
+                <a
+                  href="https://github.com/ecyriaque/Burger7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code ↗</a
+                >
+              </article>
+              <article class="archive-item">
+                <h4>Pokédex</h4>
+                <p>
+                  Interface Angular pour parcourir les Pokémon et leurs
+                  informations.
+                </p>
+                <a
+                  href="https://github.com/ecyriaque/poke8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code ↗</a
+                >
+              </article>
+              <article class="archive-item">
+                <h4>Plateforme académique</h4>
+                <p>
+                  Évolution d’une application, intégration continue et
+                  préparation du déploiement avec les retours du client.
+                </p>
+                <a
+                  href="https://github.com/DUT-Info-Montreuil/SAE_6.A-EDT_V0-SAPP"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code ↗</a
+                >
+              </article>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="section experience-section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="wrap experience-grid">
+          <div class="experience-intro">
+            <p class="eyebrow">02 / Expérience</p>
+            <h2 id="experience-title">
+              Apprendre.<br />Construire.<br />Livrer.
+            </h2>
+            <p>
+              Depuis 2024, je travaille chez un éditeur SaaS sur des
+              applications utilisées au quotidien. Avant cela, deux stages en
+              laboratoire m’ont donné le goût du développement d’interfaces et
+              d’API.
+            </p>
+            <div class="actions">
+              <a class="text-link" href="CV_Emilio_Cyriaque.pdf" download
+                >Mon parcours en PDF <span aria-hidden="true">↓</span></a
+              >
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="work-box">
-              <a href="https://github.com/DUT-Info-Montreuil/SAE_6.A-EDT_V0-SAPP" target="_blank">
-                <div class="work-img">
-                  <img src="img/Courroux.PNG" alt="Application de Gestion de Commandes de Burgers" class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h2 class="w-title">Optimisation et Déploiement d'une Plateforme d'Emploi du Temps Académique</h2>
-                      <p class="w-description">
-           
-Le projet  consiste à améliorer une application existante en intégrant de nouveaux services, en établissant un processus d'intégration continue avec le client final pour les tests et les retours, et en configurant l'environnement de déploiement.s </p>
-                      <div class="w-more">
-                        <span class="w-ctegory">Mobile Development</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
+          <div class="timeline">
+            <article class="timeline-item">
+              <p class="timeline-date">
+                Novembre 2024 — aujourd’hui · Alternance
+              </p>
+              <h3>Wartner</h3>
+              <div class="timeline-role">Développeur full stack</div>
+              <p>
+                Éditeur SaaS pour la gestion et la traçabilité en blanchisserie
+                industrielle. Je travaille sur le back-office, le portail client
+                et leur API.
+              </p>
+              <ul>
+                <li>
+                  Une vingtaine de rapports décisionnels : de la requête SQL à
+                  l’écran, avec exports CSV et Excel.
+                </li>
+                <li>
+                  Bascule multi-comptes parent/enfant, JWT et contrôle d’accès
+                  par rôle, couverts par tests unitaires.
+                </li>
+                <li>
+                  Optimisation PostgreSQL et correction des doublons à la
+                  source.
+                </li>
+              </ul>
+              <ul class="tags">
+                <li>React / TypeScript</li>
+                <li>NestJS</li>
+                <li>PostgreSQL</li>
+                <li>Scrum</li>
+              </ul>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">Mars — juillet 2024 · Stage</p>
+              <h3>LIASD · IUT de Montreuil</h3>
+              <div class="timeline-role">Développement full stack</div>
+              <p>
+                Interfaces d’annotation de la plateforme SPACeL, API Node.js
+                pour leur intégration et dockerisation du front, du backend et
+                de la base de données.
+              </p>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">Mai — juin 2023 · Stage</p>
+              <h3>LIASD · SPACeL</h3>
+              <div class="timeline-role">Développement d’interfaces</div>
+              <p>
+                Interfaces React et TypeScript, amélioration des parcours
+                utilisateur et intégration avec les services backend.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="skills" aria-labelledby="skills-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03 / Compétences</p>
+            <h2 id="skills-title">Une stack, de bout en bout.</h2>
+          </div>
+          <p class="section-intro">
+            Des outils choisis pour concevoir, tester et faire vivre les
+            applications que je développe.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-item">
+            <span class="skill-number">01 / Interface</span>
+            <h3>Web &amp; mobile</h3>
+            <p>
+              React, TypeScript, Next.js, Vite, TanStack Query, React Native et
+              Expo. HTML et CSS.
+            </p>
+          </article>
+          <article class="skill-item">
+            <span class="skill-number">02 / Métier</span>
+            <h3>Backend &amp; API</h3>
+            <p>
+              NestJS, Node.js, TypeORM, API REST, JWT et contrôles d’accès.
+              Symfony et Flask sur d’autres projets.
+            </p>
+          </article>
+          <article class="skill-item">
+            <span class="skill-number">03 / Données</span>
+            <h3>Stockage &amp; SQL</h3>
+            <p>
+              PostgreSQL, MySQL, SQLite et IndexedDB. Modélisation, requêtes
+              analytiques et synchronisation hors ligne.
+            </p>
+          </article>
+          <article class="skill-item">
+            <span class="skill-number">04 / Livraison</span>
+            <h3>Infrastructure</h3>
+            <p>
+              Docker, Docker Compose, Nginx, GitHub Actions, Cloudflare Tunnel,
+              Linux et VPS OVH.
+            </p>
+          </article>
+          <article class="skill-item">
+            <span class="skill-number">05 / Fiabilité</span>
+            <h3>Tests &amp; suivi</h3>
+            <p>
+              Jest, Vitest, tests de bout en bout, SonarQube, Datadog,
+              Elasticsearch et Kibana.
+            </p>
+          </article>
+          <article class="skill-item">
+            <span class="skill-number">06 / Collectif</span>
+            <h3>Méthodes &amp; outils</h3>
+            <p>
+              Git, GitHub, GitLab, Scrum, Jira, revues de code, UML, Postman et
+              DBeaver.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section wrap about-grid"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="about-copy">
+          <p class="eyebrow">04 / À propos</p>
+          <h2 id="about-title">
+            Curieux par nature.<br />Responsable jusqu’au bout.
+          </h2>
+          <p>
+            Ce que je préfère, c’est livrer une fonctionnalité complète et en
+            rester responsable une fois qu’elle tourne. Comprendre le besoin,
+            poser le modèle de données, construire l’interface et vérifier ce
+            qui se passe en production.
+          </p>
+          <p>
+            Mes projets personnels me permettent d’explorer cette chaîne en
+            autonomie, du code au monitoring. Au travail, j’apprends à la faire
+            vivre en équipe.
+          </p>
+          <p>
+            En dehors du code, je pratique le street workout. La régularité et
+            les petites progressions y comptent beaucoup ; c’est une approche
+            que je retrouve dans ma façon de développer.
+          </p>
+          <div class="resume-link" id="resume">
+            <div>
+              <strong>Mon CV, pour aller à l’essentiel.</strong>
+              <p>Expérience, formation et compétences dans un seul document.</p>
             </div>
+            <a
+              class="button button-light"
+              href="CV_Emilio_Cyriaque.pdf"
+              download
+              >Télécharger <span aria-hidden="true">↓</span></a
+            >
           </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
+        </div>
+        <div class="education" id="academic">
+          <h3>Parcours &amp; formation</h3>
+          <article class="education-item">
+            <time>2024–26</time>
+            <div>
+              <h4>Mastère Lead Developer Full Stack</h4>
+              <p>
+                ENSITECH · Cergy<br />En alternance, jusqu’en novembre 2026.
+              </p>
             </div>
+          </article>
+          <article class="education-item">
+            <time>2024</time>
+            <div>
+              <h4>BUT Informatique</h4>
+              <p>IUT de Montreuil · Diplôme obtenu.</p>
+            </div>
+          </article>
+          <article class="education-item">
+            <time>2021</time>
+            <div>
+              <h4>Baccalauréat STI2D</h4>
+              <p>Lycée Condorcet · Montreuil<br />Mention assez bien.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="wrap contact-grid">
+          <div>
+            <p class="eyebrow">Et la suite ?</p>
+            <h2 id="contact-title">Construisons<br />quelque chose d’utile.</h2>
+            <p>
+              Je recherche un CDI en développement full stack dès novembre 2026.
+              Un projet, une équipe ou simplement une question ? Échangeons.
+            </p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:emilio.cyriaque97493@gmail.com"
+              >emilio.cyriaque97493@gmail.com
+              <span aria-hidden="true">↗</span></a
+            ><a
+              href="https://www.linkedin.com/in/emilio-c-664481304/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Retrouvons-nous sur LinkedIn <span aria-hidden="true">↗</span></a
+            ><a
+              href="https://github.com/ecyriaque"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Mes projets sur GitHub <span aria-hidden="true">↗</span></a
+            >
           </div>
         </div>
-      </div>
-
-      
-    </section>
-
-<!-- Section Dernier Projet Start -->
-<section id="last-project" class="services-mf route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">Dernier Projet</h3>
-          <p class="subtitle-a">
-            Voici mon dernier projet en détail.
-          </p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-       
-        <div class="service-box">
-         
-          <div class="service-content">
-            <h2 class="s-title">CVMI — Coach Virtuel de Musculation Intelligent</h2>
-
-            <p class="s-description text-center">
-              Une application de suivi et de coaching de musculation, avec une interface web et
-              un client mobile développé pour Android et iOS. Je l'ai menée seul de bout en bout,
-              du cahier des charges à la mise en production. Mon fil conducteur : pouvoir noter
-              ses séries en salle, suivre sa progression et retrouver ses données malgré les coupures réseau.
-            </p>
-
-            <h2>Ce que j'ai construit</h2>
-            <p class="s-description text-center">
-              Un back-end NestJS découpé en modules métier — exercices, muscles, programmes, séances,
-              performances — sur PostgreSQL avec TypeORM et des migrations versionnées. Cette API
-              commune applique les règles métier et vérifie que chaque utilisateur accède uniquement
-              à ses propres programmes, séances et performances.
-            </p>
-            <p class="s-description text-center">
-              Le web utilise Next.js et le mobile React Native avec Expo. Les deux clients vivent
-              dans un monorepo npm, avec un package TypeScript commun pour les contrats métier,
-              la validation et la charte graphique. Ils partagent les comptes et l'API, tout en
-              gardant une interface et un stockage hors ligne adaptés à chaque plateforme.
-            </p>
-
-            <h2>Un coaching adapté à l'entraînement</h2>
-            <p class="s-description text-center">
-              En production, les recommandations reposent sur des règles métier explicables :
-              objectif de force, d'hypertrophie ou de faible volume ; phase de prise de masse,
-              de maintien ou de sèche ; historique et effort ressenti. Les charges proposées
-              respectent aussi le matériel et les incréments disponibles dans la salle.
-            </p>
-            <p class="s-description text-center">
-              J'ai également intégré ONNX Runtime côté serveur et un pipeline d'entraînement
-              pour expérimenter un modèle de recommandation. Cette voie reste optionnelle :
-              le moteur actif pour les conseils par exercice est celui des règles métier.
-            </p>
-
-            <p class="s-description text-center">
-              <img src="img/cvmi-dashboard.png" alt="Tableau de bord de CVMI, avec les statistiques d'entraînement et le panneau de coaching par IA" class="img-fluid">
-            </p>
-            <p class="s-description text-center">
-              <em>Vue web du tableau de bord : le panneau de coaching synthétise les conseils
-              d'ajustement de charge, de RPE et de repos à partir de l'historique.</em>
-            </p>
-
-            <h2>Les séances, les supersets et la progression</h2>
-            <p class="s-description text-center">
-              Chaque série conserve sa charge, ses répétitions, son RPE et son repos.
-              Un superset associe deux exercices : enregistrer A ouvre B sans récupération,
-              puis enregistrer B lance le repos commun avant le tour suivant. Les paires sont
-              sauvegardées dans la séance, y compris quand elle est suivie hors ligne.
-            </p>
-            <p class="s-description text-center">
-              L'historique détaillé par exercice permet de retrouver les anciennes séries et
-              d'estimer un maximum, en tenant compte du poids de corps pour les mouvements concernés.
-              Le mobile permet aussi de créer un exercice depuis le catalogue, un programme ou une
-              séance. Le catalogue est partagé ; la modification et la suppression restent réservées
-              aux administrateurs, avec protection des exercices système.
-            </p>
-
-            <p class="s-description text-center">
-              <img src="img/cvmi-seances.png" alt="Historique des séances d'entraînement avec leur statut et leur durée" class="img-fluid">
-            </p>
-
-            <h2>L'authentification, en détail</h2>
-            <p class="s-description text-center">
-              C'est la partie dont je suis le plus satisfait, parce que c'est celle où une erreur coûte
-              le plus cher. Les mots de passe sont hachés avec Argon2. Les jetons JWT sont émis par
-              paire, un access et un refresh. Le jeton de renouvellement est lui aussi stocké
-              haché en base, puis consommé et remplacé dans une transaction lors de son utilisation.
-            </p>
-            <p class="s-description text-center">
-              La vérification d'e-mail est obligatoire avant le premier accès, la politique de mot de
-              passe impose douze caractères avec majuscule, minuscule, chiffre et caractère spécial —
-              validée en direct dans le formulaire — et le lien de réinitialisation expire au bout de
-              trente minutes. Les origines autorisées en CORS sont déclarées explicitement, jamais
-              ouvertes par défaut.
-            </p>
-            <p class="s-description text-center">
-              Quatre garde-fous que j'ai ajoutés parce qu'ils manquaient : une double authentification
-              par code envoyé par e-mail à la connexion, un CAPTCHA à l'inscription pour bloquer les
-              créations automatisées, un historique des mots de passe pour empêcher la réutilisation
-              d'un ancien, et une question de sécurité pour la récupération de compte.
-            </p>
-
-            <p class="s-description text-center">
-              <img src="img/cvmi-2fa.png" alt="Écran de saisie du code de connexion à six chiffres envoyé par e-mail" class="img-fluid">
-            </p>
-
-            <h2>Les sessions, appareil par appareil</h2>
-            <p class="s-description text-center">
-              Chaque connexion crée une session rattachée à un appareil. Le serveur en déduit le type
-              de matériel, le navigateur et le système d'exploitation, et les conserve avec l'adresse
-              IP et la date. L'utilisateur voit donc la liste de ses sessions ouvertes et peut en
-              révoquer une à distance, sans toucher aux autres. C'est ce qu'on attend quand on s'est
-              connecté depuis un téléphone prêté ou un poste partagé.
-            </p>
-
-            <h2>Le mode hors ligne</h2>
-            <p class="s-description text-center">
-              C'est la contrainte qui a le plus façonné l'application : dans une salle de sport, le
-              réseau est souvent mauvais, et on ne peut pas demander à quelqu'un d'attendre le wifi
-              pour noter une série. Les séances et les performances peuvent donc être enregistrées
-              localement avant d'être synchronisées au retour du réseau.
-            </p>
-            <p class="s-description text-center">
-              Sur le web, le service worker gère les ressources de la PWA, tandis qu'IndexedDB
-              conserve les données métier séparément pour chaque compte. Les réponses d'API privées
-              ne sont pas mises en cache par le service worker. Sur mobile, SQLite conserve les
-              données et la file d'attente ; les jetons sont enregistrés dans SecureStore.
-            </p>
-            <p class="s-description text-center">
-              Les écritures en attente sont préservées pendant la synchronisation. Des identifiants
-              de création permettent au serveur de reconnaître une séance ou une série déjà acceptée
-              si sa réponse s'est perdue, et d'éviter sa duplication lors d'une reprise. Le mobile
-              retrouve le deuxième exercice d'un superset si le premier a été enregistré avant de
-              fermer l'application. La création d'un nouvel exercice nécessite une connexion.
-            </p>
-
-            <h2>Une passerelle vers Healthboard</h2>
-            <p class="s-description text-center">
-              Une API dédiée permet à Healthboard de consulter les séances CVMI pour rapprocher
-              entraînement et suivi santé. Son accès est limité au profil autorisé, avec une clé
-              spécifique et une expiration. Le serveur MCP de Healthboard utilise cette lecture
-              pour les assistants connectés, sans pouvoir modifier les séances ou les programmes CVMI.
-            </p>
-
-            <h2>Mise en production</h2>
-            <p class="s-description text-center">
-              Le web et l'API sont hébergés sur un VPS OVH avec Docker Compose : serveur Next.js,
-              API NestJS, PostgreSQL et Nginx en reverse proxy. Un tunnel Cloudflare expose le site,
-              tandis que les ports directs des services restent limités à la boucle locale.
-              GitHub Actions sépare la validation et le déploiement ; SonarQube analyse la qualité
-              du code sur un runner personnel. En développement, un serveur SMTP local intercepte
-              les e-mails pour tester les parcours sans en envoyer à de vrais destinataires.
-            </p>
-
-            <h2>Les vérifications avant livraison</h2>
-            <p class="s-description text-center">
-              La CI vérifie les types, le lint, les tests unitaires et les tests de bout en bout
-              de l'API. Jest couvre le backend ; Vitest couvre le code partagé, le web et le cœur
-              mobile, notamment la reprise réseau et l'isolation des comptes. Elle contrôle aussi
-              la compatibilité des dépendances Expo et génère les bundles Android et iOS.
-            </p>
-
-            <h2>Outils utilisés</h2>
-            <p class="s-description text-center">
-              TypeScript, NestJS, TypeORM, PostgreSQL, Next.js, React Native, Expo, TanStack Query,
-              SQLite, SecureStore, Argon2, Jest, Vitest, Docker Compose, Nginx, Cloudflare Tunnel,
-              GitHub Actions et SonarQube. ONNX Runtime pour l'expérimentation de modèles.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Section Dernier Projet End -->
-
-<!-- Section Conso Start -->
-<section id="conso" class="services-mf route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">Conso — en production</h3>
-          <p class="subtitle-a">
-            Une plateforme de monitoring énergétique conçue, développée et déployée seul, à la
-            demande d'un technicien qui l'utilise au quotidien.
-          </p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="service-box">
-          <div class="service-content">
-            <h2 class="s-title">Ce que fait l'application</h2>
-            <p class="s-description text-center">
-              Le projet est parti d'un besoin concret : un technicien devait suivre les
-              consommations d'un site industriel et n'avait pas d'outil pour le faire. Conso agrège
-              le gaz, l'eau et l'électricité, les compare à des objectifs et permet de tout exporter
-              en CSV, Excel ou PDF. Le tableau de bord est configurable, parce que chacun ne suit pas
-              les mêmes indicateurs : chaque widget peut être réorganisé, affiché ou masqué.
-            </p>
-
-            <p class="s-description text-center">
-              <img src="img/conso-dashboard.png" alt="Tableau de bord de Conso, avec les métriques de consommation et les widgets configurables" class="img-fluid">
-            </p>
-
-            <h2>D'où viennent les données</h2>
-            <p class="s-description text-center">
-              Deux sources. Des capteurs LoRa posés sur les équipements, qui remontent un nombre
-              d'impulsions et une température, et l'API ENEDIS pour les points de livraison
-              électriques. Les impulsions brutes sont ensuite converties en consommations réelles,
-              et ce recalcul peut être relancé sur une période donnée quand un capteur a décroché.
-            </p>
-
-            <p class="s-description text-center">
-              <img src="img/conso-lora-history.png" alt="Historique des relevés de capteurs LoRa, avec filtres par période et par équipement" class="img-fluid">
-            </p>
-            <p class="s-description text-center">
-              <em>Les identifiants matériels des capteurs sont volontairement floutés sur cette capture.</em>
-            </p>
-
-            <h2>Mise en production</h2>
-            <p class="s-description text-center">
-              Un monorepo NestJS et React sur PostgreSQL, servi par Nginx et orchestré par Docker
-              Compose. L'accès est filtré en amont par Cloudflare Access, en Zero Trust : personne
-              n'atteint l'application sans être authentifié, y compris moi. L'intégration continue
-              tourne sur GitHub Actions, avec des pipelines de build et de déploiement séparés.
-            </p>
-            <p class="s-description text-center">
-              Côté exploitation, les logs partent chez Datadog, l'API est protégée par Helmet et un
-              rate limiter, un mode lecture seule permet de geler les écritures, et un scan de
-              secrets tourne en pre-commit pour éviter qu'une clé finisse dans l'historique git.
-            </p>
-
-            <h2>Outils utilisés</h2>
-            <p class="s-description text-center">
-              NestJS, React, Vite, PostgreSQL, Docker Compose, Nginx, Cloudflare Access,
-              GitHub Actions, Datadog, capteurs LoRa, API ENEDIS.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Section Conso End -->
-
-
-<!-- Section Compétences Start -->
-<section id="skills" class="services-mf route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">Compétences</h3>
-          <p class="subtitle-a">
-            Voici un aperçu de mes compétences acquises au fil de mon parcours académique et de mes expériences professionnelles.
-          </p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Compétence Front-end -->
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="ion-code-working"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Front-end</h2>
-            <p class="s-description text-center">
-              React, TypeScript, Vite, TanStack Query, Next.js, React Native, Expo, HTML5, CSS3.
-              Angular sur projets antérieurs.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Compétence Back-end et API -->
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="ion-cube"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Back-end et API</h2>
-            <p class="s-description text-center">
-              NestJS, Node.js, TypeORM, API REST, JWT.
-              Symfony et Flask sur projets personnels.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Compétence Bases de données -->
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="ion-ios-albums"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Bases de données</h2>
-            <p class="s-description text-center">
-              PostgreSQL, MySQL, SQLite. Modélisation, requêtes analytiques et
-              optimisation sur données de production.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Compétence DevOps et déploiement -->
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="ion-ios-gear"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">DevOps et déploiement</h2>
-            <p class="s-description text-center">
-              Docker, Docker Compose, Nginx, GitHub Actions, CI/CD, Jenkins,
-              Cloudflare Tunnel.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Compétence Qualité et observabilité -->
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="ion-checkmark-circled"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Qualité et observabilité</h2>
-            <p class="s-description text-center">
-              Tests unitaires (Jest, Vitest), tests de bout en bout, SonarQube, Datadog, Elasticsearch et
-              Kibana, revues de code.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Compétence Méthodes et outils -->
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="ion-hammer"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Méthodes et outils</h2>
-            <p class="s-description text-center">
-              Scrum, Jira, Git, GitHub, GitLab, UML, Linux (Ubuntu), VSCode,
-              DBeaver, Postman.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Section Compétences End -->
-
-    <!--/ Section Portfolio End /-->
-
-    <!--/ Section Testimonials Star /-->
-
-
-
-    <!--/ Section Contact-Footer Star /-->
-    <!--/ Section Contact-footer End /-->
-
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <div id="preloader"></div>
-
-    <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/popper/popper.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/counterup/jquery.waypoints.min.js"></script>
-    <script src="lib/counterup/jquery.counterup.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <!-- Contact Form JavaScript File -->
-    <script src="contactform/contactform.js"></script>
-
-    <!-- Template Main Javascript File -->
-    <script src="js/main.js"></script>
+      </section>
+    </main>
+    <footer class="wrap site-footer">
+      <span>© 2026 Emilio Cyriaque. Pensé avec soin, construit pour durer.</span
+      ><a class="up-link" href="#page-top">Retour en haut ↑</a>
+    </footer>
   </body>
 </html>
