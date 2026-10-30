@@ -8,14 +8,14 @@
       name="description"
       content="Développeur full stack React, TypeScript et NestJS. Découvrez mes projets web et mobiles en production, mon expérience et mon parcours. Disponible en CDI dès novembre 2026."
     />
-    <meta name="theme-color" content="#f6f5f0" />
+    <meta name="theme-color" content="#f7f8fa" />
     <meta
       property="og:title"
       content="Emilio Cyriaque — Développeur full stack"
     />
     <meta
       property="og:description"
-      content="Du code aux produits en production. Projets, expérience et parcours d’un développeur React, TypeScript et NestJS."
+      content="Emilio Cyriaque, développeur full stack. Applications web et mobiles, projets personnels et expérience chez Wartner."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ecyriaque.github.io/" />
@@ -35,6 +35,10 @@
           display: none;
         }
         .site-nav {
+          visibility: visible !important;
+          opacity: 1 !important;
+          transform: none !important;
+          pointer-events: auto !important;
           display: flex;
           position: static;
           flex-wrap: wrap;
@@ -82,76 +86,66 @@
           <a href="#work">Projets</a><a href="#experience">Expérience</a
           ><a href="#skills">Compétences</a><a href="#about">À propos</a
           ><a href="#contact" class="nav-contact"
-            >Parlons de votre projet <span aria-hidden="true">↗</span></a
+            >Me contacter <span aria-hidden="true">↗</span></a
           >
         </nav>
       </div>
     </header>
     <main id="main" tabindex="-1">
       <section class="hero wrap" id="home" aria-labelledby="hero-title">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <span class="availability"
-              >Disponible en CDI dès novembre 2026</span
-            >
-            <h1 id="hero-title">
-              Du code.<br />Des produits.<br /><em>En production.</em>
-            </h1>
-            <p class="hero-description">
-              Je suis <strong>Emilio Cyriaque</strong>, développeur full stack.
-              Je conçois des applications utiles, de l’interface à l’API, et je
-              les accompagne jusqu’à leur mise en production.
-            </p>
-            <div class="actions">
-              <a class="button" href="#work"
-                >Découvrir mes projets
-                <span class="arrow" aria-hidden="true">↘</span></a
-              ><a class="text-link" href="CV_Emilio_Cyriaque.pdf" download
-                >Télécharger mon CV <span aria-hidden="true">↓</span></a
-              >
-            </div>
-            <p class="hero-note">
-              React &amp; TypeScript · NestJS · PostgreSQL · Docker
-            </p>
-          </div>
-          <figure class="portrait-card">
+        <div class="hero-top">
+          <span>Développeur full stack</span
+          ><span class="availability">CDI · novembre 2026</span>
+        </div>
+        <h1 id="hero-title" aria-label="Emilio Cyriaque">
+          <span class="name-line"><span class="hero-word">Emilio</span></span
+          ><span class="name-line"
+            ><span class="hero-word"
+              >Cyriaque<span class="name-dot">.</span></span
+            ></span
+          >
+        </h1>
+        <div class="hero-bottom">
+          <div class="hero-person">
             <img
               src="img/moi-linkedin.png"
               width="600"
               height="600"
-              alt="Emilio Cyriaque, développeur full stack"
+              alt="Portrait d’Emilio Cyriaque"
               fetchpriority="high"
             />
-            <span class="portrait-tag">De l’idée à la livraison.</span>
-            <figcaption class="portrait-caption">
-              <span>Emilio Cyriaque</span
-              ><span>Développement · Architecture · Livraison</span>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="hero-rail" aria-label="Mon profil en quelques repères">
-          <div class="rail-item">
-            <strong>Full stack</strong
-            ><span>Du front à la base de données</span>
+            <p>Web, mobile<br />et un peu de street workout.</p>
           </div>
-          <div class="rail-item">
-            <strong>En production</strong><span>Wartner · CVMI · Conso</span>
+          <div class="hero-copy">
+            <p class="hero-description">
+              Je développe des applications web et mobiles. Chez Wartner, je
+              travaille sur un SaaS en production. À côté, je construis mes
+              propres projets, de l’interface au déploiement.
+            </p>
+            <div class="actions">
+              <a class="button" href="#work" data-magnetic
+                >Voir mes projets
+                <span class="arrow" aria-hidden="true">↗</span></a
+              ><a class="text-link" href="CV_Emilio_Cyriaque.pdf" download
+                >Mon CV <span aria-hidden="true">↓</span></a
+              >
+            </div>
           </div>
-          <div class="rail-item">
-            <strong>Web &amp; mobile</strong><span>React · Next.js · Expo</span>
-          </div>
+          <a class="scroll-note" href="#work"
+            >La suite, juste en dessous <span aria-hidden="true">↓</span></a
+          >
         </div>
       </section>
 
       <section class="section wrap" id="work" aria-labelledby="projects-title">
         <div class="section-head">
           <div>
-            <p class="eyebrow">01 / Projets sélectionnés</p>
-            <h2 id="projects-title">Conçus pour être utilisés.</h2>
+            <p class="eyebrow">Projets personnels</p>
+            <h2 id="projects-title">Ce sur quoi je travaille.</h2>
           </div>
           <p class="section-intro">
-            Deux applications que j’ai conçues, développées et déployées seul.
-            De vrais usages, avec les contraintes qui vont avec.
+            Deux applications que je développe et maintiens, et quelques
+            expériences à côté.
           </p>
         </div>
         <div class="project-list">
@@ -169,11 +163,11 @@
             /></a>
             <div class="project-content">
               <div class="project-meta">
-                01 — Projet personnel <span>En production</span>
+                Web &amp; mobile <span>En production</span>
               </div>
               <h3>CVMI</h3>
               <div class="project-subtitle">
-                Le suivi sportif, même sans réseau.
+                Un carnet de musculation qui fonctionne en salle.
               </div>
               <p>
                 Un coach de musculation web et mobile : séances, supersets et
@@ -188,7 +182,7 @@
                 <li>PostgreSQL</li>
               </ul>
               <a class="text-link" href="projets/cvmi.html"
-                >Explorer le projet <span aria-hidden="true">↗</span></a
+                >Voir le projet <span aria-hidden="true">↗</span></a
               >
             </div>
           </article>
@@ -206,11 +200,11 @@
             /></a>
             <div class="project-content">
               <div class="project-meta">
-                02 — Besoin métier <span>En production</span>
+                Monitoring énergétique <span>En production</span>
               </div>
               <h3>Conso</h3>
               <div class="project-subtitle">
-                Des données brutes aux bons indicateurs.
+                Suivre les consommations d’un site industriel.
               </div>
               <p>
                 Une plateforme de monitoring énergétique utilisée par un
@@ -225,7 +219,7 @@
                 <li>Docker</li>
               </ul>
               <a class="text-link" href="projets/conso.html"
-                >Explorer le projet <span aria-hidden="true">↗</span></a
+                >Voir le projet <span aria-hidden="true">↗</span></a
               >
             </div>
           </article>
@@ -240,7 +234,7 @@
               alt="Sélecteur de plateau Mario Party Jamboree"
             />
             <div>
-              <p class="eyebrow">Terrain de jeu</p>
+              <p class="eyebrow">À côté</p>
               <h3>Mario Party en 3D</h3>
               <p>
                 React Three Fiber, Three.js, GSAP et une bonne dose
@@ -257,7 +251,7 @@
             </div>
           </article>
           <details class="archive">
-            <summary>D’autres projets, d’autres apprentissages</summary>
+            <summary>Les autres projets</summary>
             <p>
               Des projets de formation et d’exploration, côté web, mobile et
               jeux.
@@ -363,10 +357,8 @@
       >
         <div class="wrap experience-grid">
           <div class="experience-intro">
-            <p class="eyebrow">02 / Expérience</p>
-            <h2 id="experience-title">
-              Apprendre.<br />Construire.<br />Livrer.
-            </h2>
+            <p class="eyebrow">Expérience</p>
+            <h2 id="experience-title">Ce que je fais<br />au quotidien.</h2>
             <p>
               Depuis 2024, je travaille chez un éditeur SaaS sur des
               applications utilisées au quotidien. Avant cela, deux stages en
@@ -438,17 +430,16 @@
       <section class="section wrap" id="skills" aria-labelledby="skills-title">
         <div class="section-head">
           <div>
-            <p class="eyebrow">03 / Compétences</p>
-            <h2 id="skills-title">Une stack, de bout en bout.</h2>
+            <p class="eyebrow">Stack</p>
+            <h2 id="skills-title">Les outils que j’utilise.</h2>
           </div>
           <p class="section-intro">
-            Des outils choisis pour concevoir, tester et faire vivre les
-            applications que je développe.
+            Du frontend à la base de données, avec les tests et le déploiement.
           </p>
         </div>
         <div class="skills-grid">
           <article class="skill-item">
-            <span class="skill-number">01 / Interface</span>
+            <span class="skill-number">Interface</span>
             <h3>Web &amp; mobile</h3>
             <p>
               React, TypeScript, Next.js, Vite, TanStack Query, React Native et
@@ -456,7 +447,7 @@
             </p>
           </article>
           <article class="skill-item">
-            <span class="skill-number">02 / Métier</span>
+            <span class="skill-number">Métier</span>
             <h3>Backend &amp; API</h3>
             <p>
               NestJS, Node.js, TypeORM, API REST, JWT et contrôles d’accès.
@@ -464,7 +455,7 @@
             </p>
           </article>
           <article class="skill-item">
-            <span class="skill-number">03 / Données</span>
+            <span class="skill-number">Données</span>
             <h3>Stockage &amp; SQL</h3>
             <p>
               PostgreSQL, MySQL, SQLite et IndexedDB. Modélisation, requêtes
@@ -472,7 +463,7 @@
             </p>
           </article>
           <article class="skill-item">
-            <span class="skill-number">04 / Livraison</span>
+            <span class="skill-number">Livraison</span>
             <h3>Infrastructure</h3>
             <p>
               Docker, Docker Compose, Nginx, GitHub Actions, Cloudflare Tunnel,
@@ -480,7 +471,7 @@
             </p>
           </article>
           <article class="skill-item">
-            <span class="skill-number">05 / Fiabilité</span>
+            <span class="skill-number">Fiabilité</span>
             <h3>Tests &amp; suivi</h3>
             <p>
               Jest, Vitest, tests de bout en bout, SonarQube, Datadog,
@@ -488,7 +479,7 @@
             </p>
           </article>
           <article class="skill-item">
-            <span class="skill-number">06 / Collectif</span>
+            <span class="skill-number">Collectif</span>
             <h3>Méthodes &amp; outils</h3>
             <p>
               Git, GitHub, GitLab, Scrum, Jira, revues de code, UML, Postman et
@@ -504,10 +495,8 @@
         aria-labelledby="about-title"
       >
         <div class="about-copy">
-          <p class="eyebrow">04 / À propos</p>
-          <h2 id="about-title">
-            Curieux par nature.<br />Responsable jusqu’au bout.
-          </h2>
+          <p class="eyebrow">À propos</p>
+          <h2 id="about-title">Ce qui me plaît<br />dans ce métier.</h2>
           <p>
             Ce que je préfère, c’est livrer une fonctionnalité complète et en
             rester responsable une fois qu’elle tourne. Comprendre le besoin,
@@ -526,8 +515,8 @@
           </p>
           <div class="resume-link" id="resume">
             <div>
-              <strong>Mon CV, pour aller à l’essentiel.</strong>
-              <p>Expérience, formation et compétences dans un seul document.</p>
+              <strong>Mon CV</strong>
+              <p>Le détail de mon parcours, en PDF.</p>
             </div>
             <a
               class="button button-light"
@@ -572,8 +561,8 @@
       >
         <div class="wrap contact-grid">
           <div>
-            <p class="eyebrow">Et la suite ?</p>
-            <h2 id="contact-title">Construisons<br />quelque chose d’utile.</h2>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">On en parle ?</h2>
             <p>
               Je recherche un CDI en développement full stack dès novembre 2026.
               Un projet, une équipe ou simplement une question ? Échangeons.
@@ -587,19 +576,19 @@
               href="https://www.linkedin.com/in/emilio-c-664481304/"
               target="_blank"
               rel="noopener noreferrer"
-              >Retrouvons-nous sur LinkedIn <span aria-hidden="true">↗</span></a
+              >LinkedIn <span aria-hidden="true">↗</span></a
             ><a
               href="https://github.com/ecyriaque"
               target="_blank"
               rel="noopener noreferrer"
-              >Mes projets sur GitHub <span aria-hidden="true">↗</span></a
+              >GitHub <span aria-hidden="true">↗</span></a
             >
           </div>
         </div>
       </section>
     </main>
     <footer class="wrap site-footer">
-      <span>© 2026 Emilio Cyriaque. Pensé avec soin, construit pour durer.</span
+      <span>© 2026 Emilio Cyriaque.</span
       ><a class="up-link" href="#page-top">Retour en haut ↑</a>
     </footer>
   </body>
