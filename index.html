@@ -411,15 +411,15 @@
                   <div class="col-sm-12">
                     <h2 class="w-title">CVMI — coach virtuel de musculation</h2>
                     <p class="w-description">
-                      Une application web et mobile qui mesure les séances et recommande des charges,
-                      via un modèle ONNX embarqué. Back NestJS avec TypeORM et migrations PostgreSQL,
-                      front Next.js packagé iOS et Android avec Capacitor. PWA offline-first : service
-                      worker, IndexedDB et file de synchronisation, parce qu'en salle le réseau est
-                      mauvais. Auth soignée : Argon2, JWT rotatifs, double authentification par e-mail
-                      et sessions révocables par appareil. Code privé.
+                      Une application de suivi et de coaching de musculation : web Next.js et client
+                      Android/iOS en React Native avec Expo, reliés à une API NestJS sur PostgreSQL.
+                      Séances, supersets, historique et conseils adaptés à l'objectif et au matériel,
+                      grâce à un moteur de règles explicable. Saisie des séries hors ligne avec
+                      synchronisation persistante, authentification à deux facteurs par e-mail et
+                      sessions révocables par appareil. Déployée sur un VPS OVH. Code privé.
                     </p>
                     <div class="w-more">
-                      <span class="w-ctegory">NestJS · Next.js · Capacitor · ONNX · PostgreSQL</span>
+                      <span class="w-ctegory">NestJS · Next.js · React Native · Expo · PostgreSQL</span>
                     </div>
                   </div>
                 </div>
@@ -703,31 +703,60 @@ Le projet  consiste à améliorer une application existante en intégrant de nou
             <h2 class="s-title">CVMI — Coach Virtuel de Musculation Intelligent</h2>
 
             <p class="s-description text-center">
-              Une application web et mobile qui mesure les séances d'entraînement et recommande
-              des charges. Je l'ai menée seul de bout en bout, de la veille technologique et du
-              cahier des charges jusqu'au déploiement. C'est le projet sur lequel j'ai le plus appris,
-              parce que rien n'y était déjà décidé.
+              Une application de suivi et de coaching de musculation, avec une interface web et
+              un client mobile développé pour Android et iOS. Je l'ai menée seul de bout en bout,
+              du cahier des charges à la mise en production. Mon fil conducteur : pouvoir noter
+              ses séries en salle, suivre sa progression et retrouver ses données malgré les coupures réseau.
             </p>
 
             <h2>Ce que j'ai construit</h2>
             <p class="s-description text-center">
               Un back-end NestJS découpé en modules métier — exercices, muscles, programmes, séances,
-              performances — sur PostgreSQL avec TypeORM et des migrations versionnées. Les
-              recommandations de charge ne passent pas par un service externe : elles tournent en local
-              sur un modèle au format ONNX, exécuté côté serveur avec ONNX Runtime.
+              performances — sur PostgreSQL avec TypeORM et des migrations versionnées. Cette API
+              commune applique les règles métier et vérifie que chaque utilisateur accède uniquement
+              à ses propres programmes, séances et performances.
             </p>
             <p class="s-description text-center">
-              Le front est en Next.js, packagé pour iOS et Android avec Capacitor. Une seule base de
-              code sert donc le web et le mobile, ce qui était le but : je voulais éviter de maintenir
-              deux applications séparées pour un projet mené seul.
+              Le web utilise Next.js et le mobile React Native avec Expo. Les deux clients vivent
+              dans un monorepo npm, avec un package TypeScript commun pour les contrats métier,
+              la validation et la charte graphique. Ils partagent les comptes et l'API, tout en
+              gardant une interface et un stockage hors ligne adaptés à chaque plateforme.
+            </p>
+
+            <h2>Un coaching adapté à l'entraînement</h2>
+            <p class="s-description text-center">
+              En production, les recommandations reposent sur des règles métier explicables :
+              objectif de force, d'hypertrophie ou de faible volume ; phase de prise de masse,
+              de maintien ou de sèche ; historique et effort ressenti. Les charges proposées
+              respectent aussi le matériel et les incréments disponibles dans la salle.
+            </p>
+            <p class="s-description text-center">
+              J'ai également intégré ONNX Runtime côté serveur et un pipeline d'entraînement
+              pour expérimenter un modèle de recommandation. Cette voie reste optionnelle :
+              le moteur actif pour les conseils par exercice est celui des règles métier.
             </p>
 
             <p class="s-description text-center">
               <img src="img/cvmi-dashboard.png" alt="Tableau de bord de CVMI, avec les statistiques d'entraînement et le panneau de coaching par IA" class="img-fluid">
             </p>
             <p class="s-description text-center">
-              <em>Le panneau « Coaching IA », en bas à droite, est la sortie du modèle : charge à
-              ajuster, RPE cible, temps de repos et niveau de risque.</em>
+              <em>Vue web du tableau de bord : le panneau de coaching synthétise les conseils
+              d'ajustement de charge, de RPE et de repos à partir de l'historique.</em>
+            </p>
+
+            <h2>Les séances, les supersets et la progression</h2>
+            <p class="s-description text-center">
+              Chaque série conserve sa charge, ses répétitions, son RPE et son repos.
+              Un superset associe deux exercices : enregistrer A ouvre B sans récupération,
+              puis enregistrer B lance le repos commun avant le tour suivant. Les paires sont
+              sauvegardées dans la séance, y compris quand elle est suivie hors ligne.
+            </p>
+            <p class="s-description text-center">
+              L'historique détaillé par exercice permet de retrouver les anciennes séries et
+              d'estimer un maximum, en tenant compte du poids de corps pour les mouvements concernés.
+              Le mobile permet aussi de créer un exercice depuis le catalogue, un programme ou une
+              séance. Le catalogue est partagé ; la modification et la suppression restent réservées
+              aux administrateurs, avec protection des exercices système.
             </p>
 
             <p class="s-description text-center">
@@ -738,8 +767,8 @@ Le projet  consiste à améliorer une application existante en intégrant de nou
             <p class="s-description text-center">
               C'est la partie dont je suis le plus satisfait, parce que c'est celle où une erreur coûte
               le plus cher. Les mots de passe sont hachés avec Argon2. Les jetons JWT sont émis par
-              paire, un access et un refresh, et le refresh est lui aussi stocké haché en base puis
-              rotaté à chaque usage : un jeton volé ne sert qu'une fois.
+              paire, un access et un refresh. Le jeton de renouvellement est lui aussi stocké
+              haché en base, puis consommé et remplacé dans une transaction lors de son utilisation.
             </p>
             <p class="s-description text-center">
               La vérification d'e-mail est obligatoire avant le premier accès, la politique de mot de
@@ -772,30 +801,54 @@ Le projet  consiste à améliorer une application existante en intégrant de nou
             <p class="s-description text-center">
               C'est la contrainte qui a le plus façonné l'application : dans une salle de sport, le
               réseau est souvent mauvais, et on ne peut pas demander à quelqu'un d'attendre le wifi
-              pour noter une série. L'application est donc une PWA installable qui fonctionne sans
-              connexion.
+              pour noter une série. Les séances et les performances peuvent donc être enregistrées
+              localement avant d'être synchronisées au retour du réseau.
             </p>
             <p class="s-description text-center">
-              Un service worker versionné gère quatre caches distincts, séparés selon leur nature :
-              les ressources statiques, les pages, les réponses d'API et les images. Les données de
-              l'utilisateur sont stockées en IndexedDB, et les modifications faites hors ligne partent
-              dans une file de synchronisation qui les rejoue dès que le réseau revient. Un indicateur
-              affiche en permanence l'état de la connexion et le nombre d'opérations en attente.
+              Sur le web, le service worker gère les ressources de la PWA, tandis qu'IndexedDB
+              conserve les données métier séparément pour chaque compte. Les réponses d'API privées
+              ne sont pas mises en cache par le service worker. Sur mobile, SQLite conserve les
+              données et la file d'attente ; les jetons sont enregistrés dans SecureStore.
+            </p>
+            <p class="s-description text-center">
+              Les écritures en attente sont préservées pendant la synchronisation. Des identifiants
+              de création permettent au serveur de reconnaître une séance ou une série déjà acceptée
+              si sa réponse s'est perdue, et d'éviter sa duplication lors d'une reprise. Le mobile
+              retrouve le deuxième exercice d'un superset si le premier a été enregistré avant de
+              fermer l'application. La création d'un nouvel exercice nécessite une connexion.
+            </p>
+
+            <h2>Une passerelle vers Healthboard</h2>
+            <p class="s-description text-center">
+              Une API dédiée permet à Healthboard de consulter les séances CVMI pour rapprocher
+              entraînement et suivi santé. Son accès est limité au profil autorisé, avec une clé
+              spécifique et une expiration. Le serveur MCP de Healthboard utilise cette lecture
+              pour les assistants connectés, sans pouvoir modifier les séances ou les programmes CVMI.
             </p>
 
             <h2>Mise en production</h2>
             <p class="s-description text-center">
-              L'ensemble tourne sous Docker Compose : l'API, la base, Nginx qui sert le front et
-              proxifie l'API, et le tunnel qui expose le service. L'intégration continue est sur
-              GitHub Actions, avec un pipeline de build et un pipeline de déploiement séparés, et
-              SonarQube surveille la qualité du code. En développement, un serveur SMTP local intercepte
-              les e-mails pour tester le parcours d'inscription sans rien envoyer à l'extérieur.
+              Le web et l'API sont hébergés sur un VPS OVH avec Docker Compose : serveur Next.js,
+              API NestJS, PostgreSQL et Nginx en reverse proxy. Un tunnel Cloudflare expose le site,
+              tandis que les ports directs des services restent limités à la boucle locale.
+              GitHub Actions sépare la validation et le déploiement ; SonarQube analyse la qualité
+              du code sur un runner personnel. En développement, un serveur SMTP local intercepte
+              les e-mails pour tester les parcours sans en envoyer à de vrais destinataires.
+            </p>
+
+            <h2>Les vérifications avant livraison</h2>
+            <p class="s-description text-center">
+              La CI vérifie les types, le lint, les tests unitaires et les tests de bout en bout
+              de l'API. Jest couvre le backend ; Vitest couvre le code partagé, le web et le cœur
+              mobile, notamment la reprise réseau et l'isolation des comptes. Elle contrôle aussi
+              la compatibilité des dépendances Expo et génère les bundles Android et iOS.
             </p>
 
             <h2>Outils utilisés</h2>
             <p class="s-description text-center">
-              NestJS, TypeORM, PostgreSQL, Next.js, Capacitor, TanStack Query, ONNX Runtime, Argon2,
-              Docker Compose, Nginx, GitHub Actions, SonarQube.
+              TypeScript, NestJS, TypeORM, PostgreSQL, Next.js, React Native, Expo, TanStack Query,
+              SQLite, SecureStore, Argon2, Jest, Vitest, Docker Compose, Nginx, Cloudflare Tunnel,
+              GitHub Actions et SonarQube. ONNX Runtime pour l'expérimentation de modèles.
             </p>
           </div>
         </div>
@@ -903,7 +956,7 @@ Le projet  consiste à améliorer une application existante en intégrant de nou
           <div class="service-content">
             <h2 class="s-title">Front-end</h2>
             <p class="s-description text-center">
-              React, TypeScript, Vite, TanStack Query, Next.js, HTML5, CSS3.
+              React, TypeScript, Vite, TanStack Query, Next.js, React Native, Expo, HTML5, CSS3.
               Angular sur projets antérieurs.
             </p>
           </div>
@@ -933,7 +986,7 @@ Le projet  consiste à améliorer une application existante en intégrant de nou
           <div class="service-content">
             <h2 class="s-title">Bases de données</h2>
             <p class="s-description text-center">
-              PostgreSQL, MySQL. Modélisation, requêtes analytiques et
+              PostgreSQL, MySQL, SQLite. Modélisation, requêtes analytiques et
               optimisation sur données de production.
             </p>
           </div>
@@ -965,7 +1018,7 @@ Le projet  consiste à améliorer une application existante en intégrant de nou
           <div class="service-content">
             <h2 class="s-title">Qualité et observabilité</h2>
             <p class="s-description text-center">
-              Tests unitaires (Jest), SonarQube, Datadog, Elasticsearch et
+              Tests unitaires (Jest, Vitest), tests de bout en bout, SonarQube, Datadog, Elasticsearch et
               Kibana, revues de code.
             </p>
           </div>
