@@ -6,13 +6,13 @@
     <title>Conso — Étude de cas · Emilio Cyriaque</title>
     <meta
       name="description"
-      content="Conso — étude de cas par Emilio Cyriaque. Transformer des données de consommation en indicateurs utiles au quotidien."
+      content="Conso, mon application de suivi du gaz, de l'eau et de l'électricité d'un site industriel, à partir de capteurs LoRa et de l'API ENEDIS."
     />
     <meta name="theme-color" content="#f7f8fa" />
     <meta property="og:title" content="Conso — Emilio Cyriaque" />
     <meta
       property="og:description"
-      content="Transformer des données de consommation en indicateurs utiles au quotidien."
+      content="Suivre le gaz, l'eau et l'électricité d'un site industriel à partir de capteurs LoRa et de l'API ENEDIS."
     />
     <meta property="og:type" content="article" />
     <meta
@@ -80,7 +80,7 @@
           ><a href="../index.html#experience">Expérience</a
           ><a href="../index.html#about">À propos</a
           ><a class="nav-contact" href="../index.html#contact"
-            >Échangeons <span aria-hidden="true">↗</span></a
+            >Me contacter <span aria-hidden="true">↗</span></a
           >
         </nav>
       </div>
@@ -94,8 +94,7 @@
           <p class="eyebrow">Étude de cas / Projet personnel</p>
           <h1>Conso<span style="color: var(--accent)">.</span></h1>
           <p class="case-lead">
-            Transformer des données de consommation en indicateurs utiles au
-            quotidien.
+            Le suivi du gaz, de l'eau et de l'électricité d'un site industriel.
           </p>
           <dl class="case-facts">
             <div>
@@ -132,13 +131,12 @@
           aria-label="Présentation détaillée de Conso"
         >
           <p class="s-description">
-            Le projet est parti d'un besoin concret : un technicien devait
-            suivre les consommations d'un site industriel et n'avait pas d'outil
-            pour le faire. Conso agrège le gaz, l'eau et l'électricité, les
-            compare à des objectifs et permet de tout exporter en CSV, Excel ou
-            PDF. Le tableau de bord est configurable, parce que chacun ne suit
-            pas les mêmes indicateurs : chaque widget peut être réorganisé,
-            affiché ou masqué.
+            J'ai développé Conso pour un technicien qui devait suivre les
+            consommations d'un site industriel et n'avait pas d'outil pour le
+            faire. L'application rassemble les relevés de gaz, d'eau et
+            d'électricité, les compare à des objectifs et permet de les exporter
+            en CSV, Excel ou PDF. Chaque widget du tableau de bord peut être
+            déplacé, affiché ou masqué selon les indicateurs à suivre.
           </p>
 
           <p class="s-description">
@@ -152,11 +150,11 @@
 
           <h2 id="d-ou-viennent-les-donnees">D'où viennent les données</h2>
           <p class="s-description">
-            Deux sources. Des capteurs LoRa posés sur les équipements, qui
-            remontent un nombre d'impulsions et une température, et l'API ENEDIS
-            pour les points de livraison électriques. Les impulsions brutes sont
-            ensuite converties en consommations réelles, et ce recalcul peut
-            être relancé sur une période donnée quand un capteur a décroché.
+            Les capteurs LoRa posés sur les équipements remontent un nombre
+            d'impulsions et une température. L'API ENEDIS fournit les données
+            des points de livraison électriques. Conso convertit les impulsions
+            brutes en consommations réelles. Si un capteur décroche, le calcul
+            peut être relancé sur la période concernée.
           </p>
 
           <p class="s-description">
@@ -176,11 +174,12 @@
 
           <h2 id="mise-en-production">Mise en production</h2>
           <p class="s-description">
-            Un monorepo NestJS et React sur PostgreSQL, servi par Nginx et
-            orchestré par Docker Compose. L'accès est filtré en amont par
-            Cloudflare Access, en Zero Trust : personne n'atteint l'application
-            sans être authentifié, y compris moi. L'intégration continue tourne
-            sur GitHub Actions, avec des pipelines de build et de déploiement
+            Le code NestJS et React est regroupé dans un monorepo, avec
+            PostgreSQL pour les données. Nginx sert l'application et Docker
+            Compose gère les services. Cloudflare Access vérifie l'identité
+            avant tout accès, y compris le mien, selon le modèle Zero Trust.
+            L'intégration continue tourne sur GitHub Actions, avec des pipelines
+            de build et de déploiement
             séparés.
           </p>
           <p class="s-description">

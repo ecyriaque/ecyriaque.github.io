@@ -6,13 +6,13 @@
     <title>CVMI — Étude de cas · Emilio Cyriaque</title>
     <meta
       name="description"
-      content="CVMI — étude de cas par Emilio Cyriaque. Un coach de musculation qui accompagne les séances, même quand le réseau ne suit pas."
+      content="CVMI, mon application web et mobile pour noter ses séries de musculation, suivre sa progression et enregistrer ses séances hors ligne."
     />
     <meta name="theme-color" content="#f7f8fa" />
     <meta property="og:title" content="CVMI — Emilio Cyriaque" />
     <meta
       property="og:description"
-      content="Un coach de musculation qui accompagne les séances, même quand le réseau ne suit pas."
+      content="Noter ses séries de musculation, suivre sa progression et enregistrer ses séances hors ligne."
     />
     <meta property="og:type" content="article" />
     <meta
@@ -80,7 +80,7 @@
           ><a href="../index.html#experience">Expérience</a
           ><a href="../index.html#about">À propos</a
           ><a class="nav-contact" href="../index.html#contact"
-            >Échangeons <span aria-hidden="true">↗</span></a
+            >Me contacter <span aria-hidden="true">↗</span></a
           >
         </nav>
       </div>
@@ -94,8 +94,8 @@
           <p class="eyebrow">Étude de cas / Projet personnel</p>
           <h1>CVMI<span style="color: var(--accent)">.</span></h1>
           <p class="case-lead">
-            Un coach de musculation qui accompagne les séances, même quand le
-            réseau ne suit pas.
+            Une application web et mobile pour suivre ses entraînements de
+            musculation, y compris hors ligne.
           </p>
           <dl class="case-facts">
             <div>
@@ -144,25 +144,26 @@
           aria-label="Présentation détaillée de CVMI"
         >
           <p class="s-description">
-            Une application de suivi et de coaching de musculation, avec une
-            interface web et un client mobile développé pour Android et iOS. Je
-            l'ai menée seul de bout en bout, du cahier des charges à la mise en
-            production. Mon fil conducteur : pouvoir noter ses séries en salle,
-            suivre sa progression et retrouver ses données malgré les coupures
-            réseau.
+            J'ai développé CVMI seul, du cahier des charges à la mise en
+            production. L'application permet de noter ses séries en salle et
+            de suivre sa progression, avec des conseils pour ajuster
+            l'entraînement. Elle dispose d'une version web et d'un client
+            mobile pour Android et iOS. Les séances restent accessibles même
+            quand le réseau coupe.
           </p>
 
           <h2 id="ce-que-j-ai-construit">Ce que j'ai construit</h2>
           <p class="s-description">
-            Un back-end NestJS découpé en modules métier — exercices, muscles,
-            programmes, séances, performances — sur PostgreSQL avec TypeORM et
-            des migrations versionnées. Cette API commune applique les règles
-            métier et vérifie que chaque utilisateur accède uniquement à ses
+            Le backend NestJS comporte des modules pour les exercices, les
+            muscles, les programmes, les séances et les performances. Il utilise
+            PostgreSQL avec TypeORM et des migrations versionnées. L'API commune
+            applique les règles métier et vérifie que chaque utilisateur accède
+            uniquement à ses
             propres programmes, séances et performances.
           </p>
           <p class="s-description">
             Le web utilise Next.js et le mobile React Native avec Expo. Les deux
-            clients vivent dans un monorepo npm, avec un package TypeScript
+            clients sont dans un monorepo npm, avec un package TypeScript
             commun pour les contrats métier, la validation et la charte
             graphique. Ils partagent les comptes et l'API, tout en gardant une
             interface et un stockage hors ligne adaptés à chaque plateforme.
@@ -179,10 +180,10 @@
             et les incréments disponibles dans la salle.
           </p>
           <p class="s-description">
-            J'ai également intégré ONNX Runtime côté serveur et un pipeline
-            d'entraînement pour expérimenter un modèle de recommandation. Cette
-            voie reste optionnelle : le moteur actif pour les conseils par
-            exercice est celui des règles métier.
+            J'ai aussi intégré ONNX Runtime côté serveur et un pipeline
+            d'entraînement pour tester un modèle de recommandation. Cette
+            expérimentation est optionnelle. Les conseils par exercice en
+            production utilisent les règles métier.
           </p>
 
           <p class="s-description">
@@ -234,27 +235,25 @@
             L'authentification, en détail
           </h2>
           <p class="s-description">
-            C'est la partie dont je suis le plus satisfait, parce que c'est
-            celle où une erreur coûte le plus cher. Les mots de passe sont
-            hachés avec Argon2. Les jetons JWT sont émis par paire, un access et
-            un refresh. Le jeton de renouvellement est lui aussi stocké haché en
+            Les mots de passe sont hachés avec Argon2. L'API émet deux jetons
+            JWT à la connexion, un access et un refresh. Le jeton de renouvellement
+            est lui aussi stocké haché en
             base, puis consommé et remplacé dans une transaction lors de son
             utilisation.
           </p>
           <p class="s-description">
             La vérification d'e-mail est obligatoire avant le premier accès, la
             politique de mot de passe impose douze caractères avec majuscule,
-            minuscule, chiffre et caractère spécial — validée en direct dans le
-            formulaire — et le lien de réinitialisation expire au bout de trente
-            minutes. Les origines autorisées en CORS sont déclarées
-            explicitement, jamais ouvertes par défaut.
+            minuscule, chiffre et caractère spécial. Le formulaire vérifie ces
+            critères pendant la saisie. Le lien de réinitialisation expire au
+            bout de trente minutes. Seules les origines déclarées explicitement
+            sont autorisées par la configuration CORS.
           </p>
           <p class="s-description">
-            Quatre garde-fous que j'ai ajoutés parce qu'ils manquaient : une
-            double authentification par code envoyé par e-mail à la connexion,
-            un CAPTCHA à l'inscription pour limiter les créations automatisées,
-            un historique des mots de passe pour empêcher la réutilisation d'un
-            ancien, et une question de sécurité pour la récupération de compte.
+            J'ai ajouté une double authentification par code envoyé par e-mail
+            et un CAPTCHA à l'inscription pour limiter les créations automatisées.
+            Un historique empêche la réutilisation d'un ancien mot de passe.
+            La récupération de compte comporte aussi une question de sécurité.
           </p>
 
           <p class="s-description">
@@ -274,18 +273,16 @@
             serveur en déduit le type de matériel, le navigateur et le système
             d'exploitation, et les conserve avec l'adresse IP et la date.
             L'utilisateur voit donc la liste de ses sessions ouvertes et peut en
-            révoquer une à distance, sans toucher aux autres. C'est ce qu'on
-            attend quand on s'est connecté depuis un téléphone prêté ou un poste
-            partagé.
+            révoquer une à distance, sans toucher aux autres, par exemple après
+            une connexion depuis un téléphone prêté ou un poste partagé.
           </p>
 
           <h2 id="le-mode-hors-ligne">Le mode hors ligne</h2>
           <p class="s-description">
-            C'est la contrainte qui a le plus façonné l'application : dans une
-            salle de sport, le réseau est souvent mauvais, et on ne peut pas
-            demander à quelqu'un d'attendre le wifi pour noter une série. Les
-            séances et les performances peuvent donc être enregistrées
-            localement avant d'être synchronisées au retour du réseau.
+            Le réseau passe parfois mal en salle de sport. J'ai prévu
+            l'enregistrement local des séances et des performances pour pouvoir
+            noter une série sans attendre une connexion. L'application les
+            synchronise quand le réseau revient.
           </p>
           <p class="s-description">
             Sur le web, le service worker gère les ressources de la PWA, tandis
